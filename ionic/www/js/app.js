@@ -41,6 +41,11 @@ var utanger = angular.module('starter', ['ionic', 'ngCookies','angularMoment'])
     templateUrl: 'templates/register.html',
     controller: 'RegCtrl'
   })
+  .state('chat', {
+    url: '/chat',
+    templateUrl: 'templates/chat.html',
+    controller: 'ChatCtrl'
+  })
   $urlRouterProvider.otherwise('/home');
 
 })

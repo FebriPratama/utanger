@@ -26,3 +26,4 @@ utanger
 .controller('RegCtrl', function(){
 
 })
+.controller('ChatCtrl', function(){})
