@@ -1,0 +1,68 @@
+@media(max-width: 320px){
+	.reg_logo {
+		margin-top: 16% !important;
+	}
+	.dta_reg_inpt {
+		margin-top: 12% !important;
+		.item-name,
+		.item-addd {
+			margin-top: 5%;
+			background-color: transparent;
+			border:1px solid;
+			border-left: 50px solid;
+			border-radius: 4px;
+			border-color: rgba(255,255,255,.2);
+			input {
+				color: #fff !important;
+				font-size: 16px;
+				font-family: "FuturaPT-Book";
+			}
+			::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+				color: #fff;
+			}
+		}
+		.broo {
+			padding: 0px !important;
+			.left_pass {
+				padding-left:0px !important;
+			}
+			.right_pass {
+				padding-right: 0px !important;
+			}
+		}
+	}
+
+	.btn_i {
+		.reg_s {
+			padding: 12px 39.9%;
+		}
+	}
+
+	.ques-reg {
+		padding-top: 4%;
+	}
+}
+
+@media(max-width: 360px){
+
+}
+
+@media(max-width: 375px){
+
+}
+
+@media(max-width: 411px){
+
+}
+
+@media(max-width: 414px){
+
+}
+
+@media(max-width: 435px){
+
+}
+
+@media(min-width: 768px){
+
+}
