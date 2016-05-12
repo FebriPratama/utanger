@@ -3,7 +3,7 @@
 // angular.module is a global place for creating, registering and retrieving Angular modules
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
-angular.module('starter', ['ionic','ngMockE2E'])
+var utanger = angular.module('starter', ['ionic', 'ngCookies','angularMoment'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -24,6 +24,7 @@ angular.module('starter', ['ionic','ngMockE2E'])
 })
 
 .config(function($stateProvider, $urlRouterProvider){
+
   $stateProvider
   .state('home', {
     url: '/home',
@@ -41,8 +42,54 @@ angular.module('starter', ['ionic','ngMockE2E'])
     controller: 'RegCtrl'
   })
   $urlRouterProvider.otherwise('/home');
+
 })
 
-.run(function($httpBackend){
-  $httpBackend.whenGET(/templates\/\w+.*/).passThrough();
-});
+
+.config(function($httpProvider){
+  
+  $httpProvider.interceptors.push('httpRequestInterceptor');
+
+})
+
+.constant('ApiEndpoint', {
+
+    url: 'http://localhost:8000/api',
+    main: 'http://localhost:8000/',
+    local: 'http://localhost:8100/pub'
+
+})
+
+.factory('httpRequestInterceptor', function ($q,$localStorage) {
+
+      function updateQueryStringParameter(uri, key, value) {
+
+        if((uri.indexOf('/api/') > -1)){
+
+          var re = new RegExp("([?&])" + key + "=.*?(&|$)", "i");
+          var separator = uri.indexOf('?') !== -1 ? "&" : "?";
+          if (uri.match(re)) {
+            return uri.replace(re, '$1' + key + "=" + value + '$2');
+          }
+          else {
+            return uri + separator + key + "=" + value;
+          }
+
+        }
+
+        return uri;
+      }
+
+      return {
+        request: function (config) {
+
+          config.headers['Authorization'] = $localStorage.getObject('ut.token') ? $localStorage.getObject('ut.token')  : '';
+
+          config.url = updateQueryStringParameter(config.url,'_key',$localStorage.getObject('ut.token') ? $localStorage.getObject('ut.token')  : '');
+
+          return config || $q.when(config);
+          
+        }
+      };
+
+  }); 

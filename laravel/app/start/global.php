@@ -48,7 +48,33 @@ Log::useFiles(storage_path().'/logs/laravel.log');
 
 App::error(function(Exception $exception, $code)
 {
-	Log::error($exception);
+	
+    Log::error($exception);
+
+    $message = $exception->getMessage();
+
+    // switch statements provided in case you need to add
+    // additional logic for specific error code.
+    switch ($code) {
+        case 401:
+            return Response::json(array(
+                    'code'      =>  401,
+                    'message'   =>  $message
+                ), 401);
+        case 404:
+            $message            = (!$message ? $message = 'the requested resource was not found' : $message);
+            return Response::json(array(
+                    'code'      =>  404,
+                    'message'   =>  $message
+                ), 404);
+        case 500:
+            $message            = (!$message ? $message = 'Server Error, we are getting this done in no time' : $message);
+            return Response::json(array(
+                    'code'      =>  500,
+                    'message'   =>  $message
+                ), 404);    
+    }
+
 });
 
 /*

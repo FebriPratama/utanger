@@ -7,14 +7,14 @@
 	</div>
 	<div class="dta_ipt">
 		<span class="item item-input item-email">
-			<input type="email" placeholder="example@mail.me">
+			<input type="email" ng-model="user.email" placeholder="example@mail.me">
 		</span>
 		<span class="item item-input item-passwd">
-			<input type="password" placeholder="password">
+			<input type="password" ng-model="user.password" placeholder="password">
 		</span>
 	</div>
 	<div class="log_btn btn_i">
-		<button class="login_u">LOG IN</button>
+		<button type="button" class="login_u" ng-click="login()" ng-disabled="loading.status">{{ loading.name }}</button>
 	</div>
 	<div class="ques">
 		<p>Don’t have account? <a href="#/register">Sign up</a></p>
