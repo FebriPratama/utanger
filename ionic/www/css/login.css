@@ -7,9 +7,17 @@ body {
     text-align: center; }
 
 @media (max-width: 320px) {
-  .icon-font {
-    font-family: "Ionicons";
-    font-weight: normal; }
+  .icon-font, .dta_ipt .item-email:before, .dta_ipt .item-passwd:before {
+    font-family: "FontAwesome";
+    position: absolute;
+    left: 0px;
+    padding: 6px 17px;
+    border-right: 1px solid;
+    border-color: rgba(255, 255, 255, 0.3);
+    top: 6px;
+    z-index: 10;
+    color: #fff;
+    font-size: 14px !important; }
 
   .logo {
     background: url(../img/320/logo.png);
@@ -31,20 +39,28 @@ body {
   .dta_ipt {
     margin-top: 25%;
     padding: 0px 20px; }
-    .dta_ipt .item-email, .dta_ipt .item-passwd {
+    .dta_ipt .item-email, .dta_ipt .item-passwd, .dta_ipt .item-name, .dta_ipt .item-addd {
       margin-top: 5%;
       background-color: transparent;
       border: 1px solid;
-      border-left: 50px solid;
+      padding-left: 65px;
       border-radius: 4px;
       border-color: rgba(255, 255, 255, 0.2); }
-      .dta_ipt .item-email input, .dta_ipt .item-passwd input {
+      .dta_ipt .item-email input, .dta_ipt .item-passwd input, .dta_ipt .item-name input, .dta_ipt .item-addd input {
         color: #fff !important;
         font-size: 16px;
         font-family: "FuturaPT-Book"; }
-      .dta_ipt .item-email ::-webkit-input-placeholder, .dta_ipt .item-passwd ::-webkit-input-placeholder {
+      .dta_ipt .item-email ::-webkit-input-placeholder, .dta_ipt .item-passwd ::-webkit-input-placeholder, .dta_ipt .item-name ::-webkit-input-placeholder, .dta_ipt .item-addd ::-webkit-input-placeholder {
         /* Chrome/Opera/Safari */
         color: #fff; }
+    .dta_ipt .item-email:before {
+      content: "\f0e0";
+      font-family: "FontAwesome"; }
+    .dta_ipt .item-passwd:before {
+      content: "\f023";
+      font-family: "FontAwesome";
+      font-size: 18px !important;
+      padding: 6px 17.5px; }
 
   .log_btn {
     text-align: center;

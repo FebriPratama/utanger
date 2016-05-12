@@ -12,8 +12,16 @@ body {
 
 @media(max-width: 320px){
 	.icon-font {
-		font-family: "Ionicons";
-		font-weight: normal;
+		font-family: "FontAwesome";
+		position: absolute;
+		left:0px;
+		padding: 6px 17px;
+		border-right: 1px solid;
+		border-color:rgba(255,255,255,.3);
+		top: 6px;
+		z-index: 10;
+		color: #fff;
+		font-size: 14px !important;
 	}
 	.logo {
 		background:url(../img/320/logo.png);
@@ -36,11 +44,11 @@ body {
 	.dta_ipt {
 		margin-top: 25%;
 		padding: 0px 20px;
-		.item-email, .item-passwd {
+		.item-email, .item-passwd, .item-name, .item-addd {
 			margin-top: 5%;
 			background-color: transparent;
 			border:1px solid;
-			border-left: 50px solid;
+			padding-left: 65px;
 			border-radius: 4px;
 			border-color: rgba(255,255,255,.2);
 			input {
@@ -50,6 +58,22 @@ body {
 			}
 			::-webkit-input-placeholder { /* Chrome/Opera/Safari */
 				color: #fff;
+			}
+		}
+		.item-email {
+			&:before {
+				content: "\f0e0";
+				font-family: "FontAwesome";
+				@extend .icon-font;
+			}
+		}
+		.item-passwd {
+			&:before {
+				content: "\f023";
+				font-family: "FontAwesome";
+				@extend .icon-font;
+				font-size: 18px!important;
+				padding: 6px 17.5px;
 			}
 		}
 	}
