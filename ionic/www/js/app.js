@@ -35,6 +35,11 @@ angular.module('starter', ['ionic','ngMockE2E'])
     templateUrl: 'templates/login.html',
     controller: 'LoginCtrl'
   })
+  .state('register', {
+    url: '/register',
+    templateUrl: 'templates/register.html',
+    controller: 'RegCtrl'
+  })
   $urlRouterProvider.otherwise('/home');
 })
 
