@@ -26,8 +26,33 @@
 		.form_input {
 			position: absolute;
 			bottom: 0;
-			.form-ch {
-				width: 300px;
+			text-align: center;
+			.joi {
+				border:none !important;
+				-webkit-box-shadow: 0px -2px 6px 0px rgba(183, 183, 183, 0.2);
+				-moz-box-shadow:    0px -2px 6px 0px rgba(183, 183, 183, 0.2);
+				box-shadow:         0px -2px 6px 0px rgba(183, 183, 183, 0.2);
+				&:before {
+					content:"\f086";
+					font-family: "FontAwesome";
+					position: absolute;
+					color: #888;
+					font-size: 18px;
+					margin-top: 5px;
+				}
+				.form-ch {
+					width: 305px;
+					border:none;
+					font-family: "FuturaPT-Book";
+					color: #888;
+					font-size: 16px;
+					padding-left: 30px;
+					background-image: none;
+				}
+				::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+					font-family: "FuturaPT-Book";
+					color: #888;
+				}
 			}
 		}
 	}
