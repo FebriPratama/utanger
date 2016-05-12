@@ -27,16 +27,7 @@
 
   .dta_ipt {
     margin-top: 25%;
-    padding: 0px 20px;
-    /*.item-email:before {
-    	@extend .icon-font;
-    	content: "\f422";
-    	position: absolute;
-    	left: 0px !important;
-    	z-index: 99999;
-    	font-size: 30px !important;
-    	color: #fff;
-    }*/ }
+    padding: 0px 20px; }
     .dta_ipt .item-email, .dta_ipt .item-passwd {
       margin-top: 5%;
       background-color: transparent;
@@ -50,6 +41,9 @@
         font-family: "FuturaPT-Book"; }
       .dta_ipt .item-email ::-webkit-input-placeholder, .dta_ipt .item-passwd ::-webkit-input-placeholder {
         /* Chrome/Opera/Safari */
-        color: #fff; } }
+        color: #fff; }
+
+  .log_btn {
+    text-align: center; } }
 
 /*# sourceMappingURL=login.css.map */

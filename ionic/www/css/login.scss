@@ -50,15 +50,10 @@
 				color: #fff;
 			}
 		}
-		/*.item-email:before {
-			@extend .icon-font;
-			content: "\f422";
-			position: absolute;
-			left: 0px !important;
-			z-index: 99999;
-			font-size: 30px !important;
-			color: #fff;
-		}*/
+	}
+
+	.log_btn {
+		text-align: center
 	}
 }
 
