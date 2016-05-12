@@ -40,19 +40,10 @@ angular.module('starter', ['ionic','ngMockE2E'])
     templateUrl: 'templates/register.html',
     controller: 'RegCtrl'
   })
-  .state('main', {
-    url: '/main',
-    templateUrl: 'templates/main.html',
-    abstract: true
-  })
-  .state('main.utang', {
-    url: 'main/utang',
-    views: {
-      'utang-tab': {
-        templateUrl: 'templates/utang.html',
-        controller: 'UtangCtrl'
-      }
-    }
+  .state('chat', {
+    url: '/chat',
+    templateUrl: 'templates/chat.html',
+    controller: 'ChatCtrl'
   })
   $urlRouterProvider.otherwise('/home');
 })
