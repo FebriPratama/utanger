@@ -16,8 +16,10 @@ class CreateTblNotificationsTable extends Migration {
 
 			$table->increments('notif_id');
 			$table->integer('notif_user_id');
+			$table->integer('notif_fk_id');
+			$table->string('notif_fk_type');
 			$table->integer('notif_type_id');
-			$table->string('notif_status');
+			$table->enum('notif_status',array('read','unread'));
 			$table->datetime('notif_last_sync');
 			$table->string('notif_sync_status');
 			$table->timestamps();
