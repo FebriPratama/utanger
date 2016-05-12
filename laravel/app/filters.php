@@ -11,15 +11,68 @@
 |
 */
 
-App::before(function($request)
+Route::filter('allowOrigin', function($route, $request, $response) 
 {
-	//
+    $response->header('access-control-allow-origin','*');
+    $response->header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
+    
 });
 
-
-App::after(function($request, $response)
+Route::filter('apiAuth', function() 
 {
-	//
+
+	/** 
+	* Bisa menggunakan header atau key(get)
+	* Pertama check header dulu
+	*
+	**/
+
+	// pre defined key
+	$key = '';
+	
+	if(trim(Request::header('Authorization')) !== ''){
+
+		$key = Request::header('Authorization');
+
+	}else if (trim(Input::get('_key')) !== '') {
+
+		$key = Input::get('_key');
+
+	}
+
+    $loginAPi = Tbl_token::where('token_data',$key)->first();
+    
+    /* jika ada token langsung pass */
+    if(Request::header('X-CSRF-Token') == Session::token()){
+
+    }else{
+
+	    if(is_object($loginAPi)){
+
+	    	// check expired
+	    	if( date('YmdHms', strtotime($loginAPi->token_expires_on)) > date('YmdHms', strtotime(date('YmdHms'))) == false){
+
+				return Response::json(array(
+
+					'code' => 403,
+					'message' => 'Token has been expired',
+					'type' => 'error'
+
+					));
+	    	}
+
+	    }else{
+
+			return Response::json(array(
+
+				'code' => 405,
+				'message' => 'Unauthorized Access',
+				'type' => 'error'
+
+				));
+	    }
+	}
+    
 });
 
 /*

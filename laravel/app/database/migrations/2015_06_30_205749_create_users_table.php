@@ -20,6 +20,7 @@ class CreateUsersTable extends Migration {
 			$table->string('user_fullname');
 			$table->string('user_role');
 			$table->string('email');
+			$table->string('user_validation_code');
 			$table->string('user_phone_number');
 			$table->string('user_birthdate');
 			$table->string('user_status');
