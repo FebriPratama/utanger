@@ -62,8 +62,12 @@ Route::group(['prefix' => 'api','before' => 'apiAuth','after' => 'allowOrigin'],
 
 });
 
-Route::post('register', 'UserController@store');//create/store
+Route::group(['prefix' => 'pub','after' => 'allowOrigin'], function() {
 
-Route::post('login', 'HomeController@doLogin');
+	Route::post('register', 'UserController@store');//create/store
 
-Route::post('/validation', 'UserController@validationConfirmCode');//data satu
+	Route::post('login', 'HomeController@doLogin');
+
+	Route::post('validation', 'UserController@validationConfirmCode');//data satu
+
+});
