@@ -1,0 +1,55 @@
+@font-face {
+  font-family: 'FuturaPT-Bold';
+  src: url('FuturaPT-Bold.eot?#iefix') format('embedded-opentype'),  url('FuturaPT-Bold.otf')  format('opentype'),
+	     url('FuturaPT-Bold.woff') format('woff'), url('FuturaPT-Bold.ttf')  format('truetype'), url('FuturaPT-Bold.svg#FuturaPT-Bold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FuturaPT-Book';
+  src: url('FuturaPT-Book.eot?#iefix') format('embedded-opentype'),  url('FuturaPT-Book.otf')  format('opentype'),
+	     url('FuturaPT-Book.woff') format('woff'), url('FuturaPT-Book.ttf')  format('truetype'), url('FuturaPT-Book.svg#FuturaPT-Book') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FuturaPT-DemiBold';
+  src: url('FuturaPT-DemiBold.eot?#iefix') format('embedded-opentype'),  url('FuturaPT-DemiBold.otf')  format('opentype'),
+	     url('FuturaPT-DemiBold.woff') format('woff'), url('FuturaPT-DemiBold.ttf')  format('truetype'), url('FuturaPT-DemiBold.svg#FuturaPT-DemiBold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FuturaPT-ExtraBold';
+  src: url('FuturaPT-ExtraBold.eot?#iefix') format('embedded-opentype'),  url('FuturaPT-ExtraBold.otf')  format('opentype'),
+	     url('FuturaPT-ExtraBold.woff') format('woff'), url('FuturaPT-ExtraBold.ttf')  format('truetype'), url('FuturaPT-ExtraBold.svg#FuturaPT-ExtraBold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FuturaPT-Heavy';
+  src: url('FuturaPT-Heavy.eot?#iefix') format('embedded-opentype'),  url('FuturaPT-Heavy.otf')  format('opentype'),
+	     url('FuturaPT-Heavy.woff') format('woff'), url('FuturaPT-Heavy.ttf')  format('truetype'), url('FuturaPT-Heavy.svg#FuturaPT-Heavy') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FuturaPT-Light';
+  src: url('FuturaPT-Light.eot?#iefix') format('embedded-opentype'),  url('FuturaPT-Light.otf')  format('opentype'),
+	     url('FuturaPT-Light.woff') format('woff'), url('FuturaPT-Light.ttf')  format('truetype'), url('FuturaPT-Light.svg#FuturaPT-Light') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FuturaPT-Medium';
+  src: url('FuturaPT-Medium.eot?#iefix') format('embedded-opentype'),  url('FuturaPT-Medium.otf')  format('opentype'),
+	     url('FuturaPT-Medium.woff') format('woff'), url('FuturaPT-Medium.ttf')  format('truetype'), url('FuturaPT-Medium.svg#FuturaPT-Medium') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
