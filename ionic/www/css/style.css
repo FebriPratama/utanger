@@ -19,33 +19,141 @@
         color: #fff;
         font-family: "FuturaPT-Medium";
         padding-top: 3px; }
+    .chat_pane .msg-chat {
+      width: 320px;
+      height: 511px;
+      display: table; }
+      .chat_pane .msg-chat .message-ch {
+        position: absolute;
+        bottom: 10px;
+        list-style: none;
+        padding: 0px; }
+        .chat_pane .msg-chat .message-ch .ct-box {
+          overflow: hidden;
+          vertical-align: bottom;
+          padding: 0px 10px; }
+          .chat_pane .msg-chat .message-ch .ct-box .messages {
+            border-radius: 4px;
+            width: 77%;
+            padding: 10px; }
+            .chat_pane .msg-chat .message-ch .ct-box .messages p {
+              font-family: "proxima_novalight";
+              font-size: 14px;
+              margin-bottom: 0px; }
+              .chat_pane .msg-chat .message-ch .ct-box .messages p a {
+                color: #4d8bdd;
+                text-decoration: none; }
+          .chat_pane .msg-chat .message-ch .ct-box .avatar img {
+            border-radius: 100%; }
+        .chat_pane .msg-chat .message-ch .self {
+          padding-right: 10px; }
+          .chat_pane .msg-chat .message-ch .self .messages {
+            background-color: #fff;
+            padding-left: 15px;
+            margin-right: 20px;
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06); }
+            .chat_pane .msg-chat .message-ch .self .messages:before {
+              content: "";
+              position: absolute;
+              width: 0;
+              height: 0;
+              border-top: 10px solid transparent;
+              border-bottom: 10px solid transparent;
+              border-left: 10px solid white;
+              right: 70px;
+              margin-top: 0px; }
+            .chat_pane .msg-chat .message-ch .self .messages p {
+              color: #a3a3a3; }
+          .chat_pane .msg-chat .message-ch .self .avatar {
+            float: right; }
+          .chat_pane .msg-chat .message-ch .self .timed {
+            padding-left: 5px; }
+            .chat_pane .msg-chat .message-ch .self .timed p {
+              font-size: 12px;
+              color: #CACACA;
+              margin-top: 5px;
+              font-family: "proxima_novalight"; }
+              .chat_pane .msg-chat .message-ch .self .timed p .ion-checkmark {
+                margin-left: 5px; }
+              .chat_pane .msg-chat .message-ch .self .timed p .read {
+                color: #a7cdff !important; }
+              .chat_pane .msg-chat .message-ch .self .timed p .unread {
+                color: #CACACA; }
+        .chat_pane .msg-chat .message-ch .other .messages {
+          background-color: #4d8bdd;
+          margin-left: 23%;
+          box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06); }
+          .chat_pane .msg-chat .message-ch .other .messages:before {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-top: 10px solid transparent;
+            border-bottom: 10px solid transparent;
+            border-right: 10px solid #4d8bdd;
+            left: 70px;
+            margin-top: 0px; }
+          .chat_pane .msg-chat .message-ch .other .messages p {
+            color: #fff;
+            margin-bottom: 0px; }
+        .chat_pane .msg-chat .message-ch .other .avatar {
+          float: left; }
+        .chat_pane .msg-chat .message-ch .other .timed {
+          text-align: right; }
+          .chat_pane .msg-chat .message-ch .other .timed p {
+            font-size: 12px;
+            color: #CACACA;
+            margin-top: 5px;
+            font-family: "proxima_novalight"; }
+            .chat_pane .msg-chat .message-ch .other .timed p .ion-checkmark {
+              margin-left: 5px; }
+            .chat_pane .msg-chat .message-ch .other .timed p .read {
+              color: #a7cdff !important; }
+            .chat_pane .msg-chat .message-ch .other .timed p .unread {
+              color: #CACACA; }
     .chat_pane .form_input {
       position: absolute;
       bottom: 0;
       text-align: center; }
-      .chat_pane .form_input .joi {
-        border: none !important;
-        -webkit-box-shadow: 0px -2px 6px 0px rgba(183, 183, 183, 0.2);
-        -moz-box-shadow: 0px -2px 6px 0px rgba(183, 183, 183, 0.2);
-        box-shadow: 0px -2px 6px 0px rgba(183, 183, 183, 0.2); }
-        .chat_pane .form_input .joi:before {
-          content: "\f086";
-          font-family: "FontAwesome";
-          position: absolute;
-          color: #888;
-          font-size: 18px;
-          margin-top: 5px; }
-        .chat_pane .form_input .joi .form-ch {
-          width: 305px;
-          border: none;
-          font-family: "FuturaPT-Book";
-          color: #888;
-          font-size: 16px;
-          padding-left: 30px;
-          background-image: none; }
-        .chat_pane .form_input .joi ::-webkit-input-placeholder {
-          /* Chrome/Opera/Safari */
-          font-family: "FuturaPT-Book";
-          color: #888; } }
+      .chat_pane .form_input ._iu {
+        min-width: 320px;
+        width: 320px;
+        max-width: 100%; }
+        .chat_pane .form_input ._iu .joi {
+          border: none !important;
+          -webkit-box-shadow: 0px -2px 6px 0px rgba(183, 183, 183, 0.2);
+          -moz-box-shadow: 0px -2px 6px 0px rgba(183, 183, 183, 0.2);
+          box-shadow: 0px -2px 6px 0px rgba(183, 183, 183, 0.2); }
+          .chat_pane .form_input ._iu .joi:before {
+            content: "\f11c";
+            font-family: "Ionicons";
+            position: absolute;
+            color: #D0D0D0;
+            font-size: 22px;
+            margin-top: 7px; }
+          .chat_pane .form_input ._iu .joi .form-ch {
+            width: 305px;
+            border: none;
+            font-family: "proxima_novalight";
+            color: #888;
+            font-size: 15px;
+            padding-left: 30px;
+            background-image: none;
+            height: 40px !important;
+            width: 75%; }
+          .chat_pane .form_input ._iu .joi ::-webkit-input-placeholder {
+            /* Chrome/Opera/Safari */
+            font-family: "proxima_novalight";
+            color: #D0D0D0; }
+          .chat_pane .form_input ._iu .joi .btn_submit {
+            background-color: #4d8bdd;
+            border-radius: 10%;
+            background-image: none;
+            border: none;
+            padding: 10px 20px;
+            margin-right: 10px;
+            color: #fff;
+            font-size: 14px;
+            box-shadow: 1px 1.732px 5px 0px rgba(170, 170, 170, 0.8); } }
 
 /*# sourceMappingURL=style.css.map */
