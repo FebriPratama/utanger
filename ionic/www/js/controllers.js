@@ -1,5 +1,9 @@
 utanger
-.controller('AppCtrl', function(){})
+.controller('AppCtrl', function($scope, $ionicSideMenuDelegate){
+	$scope.toggleLeft = function() {
+		$ionicSideMenuDelegate.toggleLeft();
+	};
+})
 .controller('HomeCtrl', function(){})
 .controller('LoginCtrl', function($scope,$state,User){
 
@@ -26,4 +30,4 @@ utanger
 .controller('RegCtrl', function(){
 
 })
-.controller('ChatCtrl', function(){})
+.controller('ChatCtrl', function(){});
