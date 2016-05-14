@@ -1,0 +1,191 @@
+@media(max-width: 320px){
+	/*tabs.html*/
+	.tabs {
+		background-color: #4d8bdd !important;
+		border: none;
+		background-image: none !important;
+		.utg_tab {
+			color: #fff;
+		}
+		.ion-android-home, .ion-ios-chatboxes {
+			font-size: 22px !important;
+			color: #3770bc;
+		}
+		.ion-android-people {
+			font-size: 24px !important;
+			color: #3770bc;
+		}
+		.tab-item-active {
+			.icon {
+				color: #fff !important;
+			}
+		}
+	}
+	.tabs-background-positive {
+		.tabs {
+			border-color: transparent;
+			box-shadow: 0 3px 5px rgba(0,0,0,0.18);
+		}
+	}
+
+
+	/*end*/
+
+	/*tab utang.html*/
+
+	.tabs-hed {
+		background-color: #4d8bdd !important;
+		background-image:none !important;
+		max-height: 50px;
+		height: 50px;
+		.fa-bars {
+			font-size: 18px !important;
+			color: #fff;
+			font-weight: normal;
+		}
+		.title_tab {
+			font-size: 13px !important;
+			font-family: "Roboto";
+			color: #fff !important;
+			margin: 0px;
+			letter-spacing: .3px;
+			font-weight: 500;
+			margin-top: 3px;
+		}
+		.gfr {
+			font-size: 21px !important;
+			color: #fff;
+			font-weight: normal;
+			padding-right: 7px;
+		}
+	}
+	.lst_utang {
+		padding: 5%;
+		.utangs_dta {
+			background-color: #fff;
+			border-radius: 4px;
+			box-shadow: 0 1px 2px rgba(0,0,0,0.07);
+			margin-bottom: 20px;
+			/*height: 146px;*/
+			.desc {
+				padding: 15px;
+				border-top: 3px solid #4D8BDD;
+				border-top-left-radius: 2px;
+				border-top-right-radius: 2px;
+				.img_f {
+					float: left;
+					border-radius: 100%;
+				}
+				.nam {
+					font-size: 17px;
+					color: #B3B3B3;
+					margin: 0;
+					padding-left: 60px;
+					font-family: "FuturaPT-Medium";
+				}
+				.adre {
+					padding-left: 60px;
+					font-family: "proxima_nova_rgregular";
+					font-size: 14px;
+					line-height: 18px;
+					color: #B7B7B7;
+					margin-top: 5px;
+					margin-bottom: 0px;
+				}
+			}
+			.jlkf {
+				border-top:1px solid #EFEEF9;
+				background-color: #FAFAFC;
+				padding: 5px;
+				border-bottom-left-radius: 4px;
+				border-bottom-right-radius: 4px;
+				.utang {
+					float: left;
+					text-align: center;
+					width: 33%;	
+					span {
+						font-size: 15px;
+						font-family: "FuturaPT-Light";
+						color: #C1C0D4;
+					}
+					p {
+						margin: 0;
+						font-family: "FuturaPT-Medium";
+						color: #342F37;
+					}
+				}
+				.status {
+					float: left;
+					text-align: center;
+					width: 33%;	
+					span {
+						font-size: 15px;
+						font-family: "FuturaPT-Light";
+						color: #C1C0D4;
+					}
+					p {
+						margin: 0;
+						font-family: "FuturaPT-Medium";
+						color: #342F37;
+					}
+					.paid {
+						color: #44CEA9 !important;
+					}
+					.pending {
+						color: #FF5A60 !important;
+					}
+				}
+				.tgl_kembali {
+					float: left;
+					text-align: center;
+					width: 33%;	
+					span {
+						font-size: 15px;
+						font-family: "FuturaPT-Light";
+						color: #C1C0D4;
+					}
+					p {
+						margin: 0;
+						font-family: "FuturaPT-Medium";
+						color: #342F37;
+					}
+				}
+			}
+			.del {
+				position: absolute;
+				right: 24px;
+				margin-top: 5px;
+				span {
+					color: #dedede;
+					font-size: 12px;
+				}
+			}
+		}
+	}
+
+	/*end*/
+}
+
+@media(max-width: 360px){
+
+}
+
+@media(max-width: 375px){
+
+}
+
+@media(max-width: 411px){
+
+}
+
+@media(max-width: 414px){
+
+}
+
+@media(max-width: 435px){
+
+}
+
+@media(min-width: 768px){
+
+}

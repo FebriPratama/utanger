@@ -46,6 +46,44 @@ var utanger = angular.module('starter', ['ionic', 'ngCookies','angularMoment'])
     templateUrl: 'templates/chat.html',
     controller: 'ChatCtrl'
   })
+  .state('tabs', {
+    url: '/tabs',
+    abstract: true,
+    templateUrl: 'templates/tabs.html'
+  })
+  .state('tabs.utang', {
+    url: '/utang',
+    views: {
+      'utang-tab': {
+        templateUrl: 'templates/utang.html',
+        controller: 'UtangCtrl'
+      }
+    }
+  })
+  .state('tabs.chat_list', {
+    url: '/chat_list',
+    views: {
+      'chat_list-tab': {
+        templateUrl: 'templates/chat_list.html',
+      }
+    }
+  })
+  .state('tabs.notif', {
+    url: '/notif',
+    views: {
+      'notif-tab': {
+        templateUrl: 'templates/notif.html',
+      }
+    }
+  })
+  .state('tabs.follower', {
+    url: '/follower',
+    views: {
+      'follower-tab': {
+        templateUrl: 'templates/follower.html',
+      }
+    }
+  })
   $urlRouterProvider.otherwise('/home');
 
 })
