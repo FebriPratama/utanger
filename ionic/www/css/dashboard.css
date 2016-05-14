@@ -128,6 +128,58 @@
           color: #dedede;
           font-size: 12px; }
 
+  /*end*/
+  /*tab messages*/
+  .fr_chat .chat_fr_u {
+    /*background-color: rgba(0,0,0,.3);*/
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 11px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #F3F3F3; }
+    .fr_chat .chat_fr_u .imf_g a {
+      text-decoration: none; }
+      .fr_chat .chat_fr_u .imf_g a .img_y {
+        width: 45px;
+        border-radius: 100%;
+        padding: 2px;
+        background-color: #CECECE;
+        float: left; }
+      .fr_chat .chat_fr_u .imf_g a .nameo {
+        margin: 0px;
+        font-size: 16px;
+        font-family: "proxima_novasemibold";
+        color: #454545;
+        padding-left: 55px;
+        padding-top: 5px; }
+        .fr_chat .chat_fr_u .imf_g a .nameo .dtr {
+          float: right;
+          font-size: 12px;
+          font-family: "proxima_nova_rgregular";
+          color: #BDBDBD; }
+      .fr_chat .chat_fr_u .imf_g a .cone {
+        color: #bababa;
+        font-size: 14px;
+        font-family: "proxima_nova_rgregular";
+        padding-left: 55px; }
+        .fr_chat .chat_fr_u .imf_g a .cone .msg_count {
+          padding: 0px 9px;
+          position: absolute;
+          right: 20px;
+          border-radius: 4px;
+          background-color: #4CAF50;
+          color: #fff;
+          font-family: "FuturaPT-Medium";
+          font-size: 10px; }
+    .fr_chat .chat_fr_u .del {
+      position: absolute;
+      left: 10px;
+      /* top: 0; */
+      margin-top: -11px; }
+      .fr_chat .chat_fr_u .del .ion-close-round {
+        font-size: 10px;
+        color: #dedede; }
+
   /*end*/ }
 
 /*# sourceMappingURL=dashboard.css.map */
