@@ -27,8 +27,6 @@
 			box-shadow: 0 3px 5px rgba(0,0,0,0.18);
 		}
 	}
-
-
 	/*end*/
 
 	/*tab utang.html*/
@@ -306,6 +304,55 @@
 			}
 		}
 	/*end*/
+
+	// notif page
+		.notif_co {
+			.qw_not {
+				padding: 10px 10px;
+				.mnbg_f {
+					padding: 15px 15px;
+					padding-bottom: 12px;
+					background-color: #fff;
+					border-left: 3px solid #4D8BDD;
+					margin-bottom: 10px;
+					border-radius: 2px;
+				    box-shadow: 0 1px 2px rgba(0,0,0,0.07);
+					.notif_ver {
+						float: left;
+						.void {
+							border-radius: 100%;
+							width: 38.2px;
+						}
+					}
+					.couts {
+						padding-left: 50px;
+						a {
+							text-decoration: none;
+							.bd {
+								margin: 0px;
+								color: #7C8188;
+								font-family: "proxima_nova_rgregular";
+								font-size: 14px;
+							}
+						}
+					}
+					.del_j {
+						position: absolute;
+						right: 20px;
+						margin-top: -10px;
+					    background-color: transparent;
+					    border: none;
+					    padding: 0;
+					    outline: none;
+						.ion-close-round {
+							font-size: 12px;
+							color: #dedede;
+						}
+					}
+				}
+			}
+		}
+	// end
 }
 
 @media(max-width: 360px){
