@@ -1,0 +1,11 @@
+@media (max-width: 320px) {
+  .profile_page .cie-cie {
+    box-shadow: none;
+    background-color: transparent !important; }
+    .profile_page .cie-cie .btn-h .gfro {
+      font-size: 20px !important;
+      color: #fff;
+      font-weight: normal;
+      padding-right: 7px; } }
+
+/*# sourceMappingURL=profile.css.map */
