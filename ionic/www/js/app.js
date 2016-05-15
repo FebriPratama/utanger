@@ -46,6 +46,11 @@ var utanger = angular.module('starter', ['ionic', 'ngCookies','angularMoment'])
     templateUrl: 'templates/chat.html',
     controller: 'ChatCtrl'
   })
+  .state('profile', {
+    url: '/profile',
+    templateUrl: 'templates/profile.html',
+    controller: 'ProfileCtrl'
+  })
   .state('tabs', {
     url: '/tabs',
     abstract: true,

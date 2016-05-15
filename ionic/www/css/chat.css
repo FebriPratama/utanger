@@ -18,9 +18,14 @@
         margin-top: 5px;
         padding-right: 2px; }
       .chat_pane .header_chat .pro_name {
-        color: #fff;
-        font-family: "FuturaPT-Medium";
-        padding-top: 3px; }
+        font-size: 13px !important;
+        /* font-family: "Roboto"; */
+        color: #fff !important;
+        margin: 0px;
+        letter-spacing: .5px;
+        font-weight: 500;
+        margin-top: 3px;
+        font-family: "proxima_nova_rgregular"; }
     .chat_pane .msg-chat {
       width: 320px;
       height: 511px;

@@ -1,0 +1,38 @@
+<ion-pane class="add_utg_bg">
+	<div class="isi_utr">
+		<div class="bar bar-header ads_utg">
+			<div class="sch_from">
+				<input type="text" placeholder="Search borrower..." class="borr">
+			</div>		
+		</div>
+		<div class="add_utang_isi">
+			<div class="user_choose">
+				<ion-radio ng-model="choice" ng-value="'A'">
+					<img src="../img/noname.png" alt="">
+					<p class="nabe">Borrower</p>
+				</ion-radio>
+			</div>
+			<div class="form_add_utg">
+				<div class="for_if">
+					<div class="jml_utg_">
+						<input type="text" placeholder="jumlah utang" class="inpt_utgs">
+					</div>
+					<div class="tgl_payment">
+						<input type="text" placeholder="payment date" class="payment_date">
+					</div>
+					<div class="btn_add">
+						<button class="bts_u">
+							ADD
+						</button>
+					</div>
+					<div class="btn_cancel">
+						<button class="bts_x" ng-click="closeModal()">
+							CANCEL
+						</button>
+					</div>
+					<div class="clear"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</ion-pane>

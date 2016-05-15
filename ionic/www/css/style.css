@@ -21,9 +21,14 @@
         margin-top: 5px;
         padding-right: 2px; }
       .chat_pane .header_chat .pro_name {
-        color: #fff;
-        font-family: "FuturaPT-Medium";
-        padding-top: 3px; }
+        font-size: 13px !important;
+        /* font-family: "Roboto"; */
+        color: #fff !important;
+        margin: 0px;
+        letter-spacing: .5px;
+        font-weight: 500;
+        margin-top: 3px;
+        font-family: "proxima_nova_rgregular"; }
     .chat_pane .msg-chat {
       width: 320px;
       height: 511px;
@@ -305,5 +310,14 @@
         border-top: 1px solid;
         border-bottom: 1px solid;
         border-color: rgba(255, 255, 255, 0.1); } }
+@media (max-width: 320px) {
+  .profile_page .cie-cie {
+    box-shadow: none;
+    background-color: transparent !important; }
+    .profile_page .cie-cie .btn-h .gfro {
+      font-size: 20px !important;
+      color: #fff;
+      font-weight: normal;
+      padding-right: 7px; } }
 
 /*# sourceMappingURL=style.css.map */

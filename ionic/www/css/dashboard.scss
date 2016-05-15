@@ -7,7 +7,7 @@
 		.utg_tab {
 			color: #fff;
 		}
-		.ion-android-home, .ion-ios-chatboxes {
+		.ion-android-home, .ion-ios-chatboxes, .ion-android-notifications {
 			font-size: 22px !important;
 			color: #3770bc;
 		}
@@ -43,12 +43,12 @@
 		}
 		.title_tab {
 			font-size: 13px !important;
-			font-family: "Roboto";
 			color: #fff !important;
 			margin: 0px;
-			letter-spacing: .3px;
+			letter-spacing: .5px;
 			font-weight: 500;
 			margin-top: 3px;
+			font-family: "proxima_nova_rgregular";
 		}
 		.gfr {
 			font-size: 21px !important;
@@ -169,34 +169,35 @@
 				padding-right: 20px;
 				padding-top: 11px;
 				padding-bottom: 1px;
-				border-bottom: 1px solid #F3F3F3;
+				border-bottom: 1px solid #F7F7F7;
+				background-color: #fff;
 				.imf_g {
 					a {
 						text-decoration: none;
 						.img_y {
 							width: 45px;
-							border-radius: 100%;
+							border-radius: 15%;
 							padding: 2px;
-							background-color: #CECECE;
+							/*background-color: #CECECE;*/
 							float: left;
 						}
 						.nameo {
 							margin: 0px;
 							font-size: 16px;
-							font-family: "proxima_novasemibold";
+							font-family: "proxima_nova_rgregular";
 							color: #454545;
 							padding-left: 55px;
 							padding-top: 5px;
 							.dtr {
 								float: right;
 								font-size: 12px;
-								font-family: "proxima_nova_rgregular";
-								color: #BDBDBD;
+								font-family: "proxima_novalight";
+								color: #CAD0D8;
 							}
 						}
 						.cone {
-							color: #bababa;
-							font-size: 14px;
+							color: #7D7D7D;
+							font-size: 13px;
 							font-family: "proxima_nova_rgregular";
 							padding-left: 55px;
 							.msg_count {
@@ -204,7 +205,7 @@
 								position: absolute;
 								right: 20px;
 								border-radius: 4px;
-								background-color: #4CAF50;
+								background-color: #c4dbf9;
 								color: #fff;
 								font-family: "FuturaPT-Medium";
 								font-size: 10px;
@@ -214,12 +215,12 @@
 				}
 				.del {
 					position: absolute;
-					left: 10px;
+					left: 7px;
 					/* top: 0; */
 					margin-top: -11px;
 					.ion-close-round {
 						font-size: 10px;
-						color: #dedede;
+						color: #C4DBF9;
 					}
 				}
 			}
@@ -238,7 +239,7 @@
 				padding-right: 20px;
 				.fir_content {
 					margin-top: 10px;
-					height: 102px;
+					height: 95px;
 					.cjg {
 						position: absolute;
 						margin-left: 59px;
@@ -268,8 +269,8 @@
 						}
 						.nbgf {
 							color: #949494;
-							font-size: 15px;
-							font-family: "FuturaPT-Book";
+							font-size: 13px;
+							font-family: "proxima_nova_rgregular";
 							/*font-weight: 400;*/
 							margin: 0;
 						}
@@ -347,6 +348,185 @@
 						.ion-close-round {
 							font-size: 12px;
 							color: #dedede;
+						}
+					}
+				}
+			}
+		}
+	// end
+
+	// add utang modal
+		.add_utg_bg {
+			background-color: rgba(0,0,0,.3);
+			.isi_utr {
+				padding-right:20px;
+				padding-left:20px;
+				padding-top: 30%;
+				.ads_utg {
+					position:relative;
+					border-top-right-radius: 3px;
+					border-top-left-radius: 3px;
+					background-color: #5A92DC;
+					border-bottom: none !important;
+					background-image: none;
+					height: 100%;
+					.sch_from {
+						margin: 0;
+						padding: 4px;
+						&:before {
+							content:"\f4a4";
+							font-family: "Ionicons";
+							position: absolute;
+							font-size: 21px;
+							color: #4877B5;
+							margin-top: 9px;
+							margin-left: 10px;
+						}
+					    .borr {
+					    	width: 260px;
+					    	border-radius: 4px;
+				    	    background-color: #5788CC;
+					    	padding-left: 40px;
+					    	-webkit-box-shadow: 2px 3px 6px -7px rgba(0, 0, 0, 0.5);
+					    	-moz-box-shadow: 2px 3px 6px -7px rgba(0, 0, 0, 0.5);
+					    	box-shadow: inset 2px 3px 6px -7px rgba(0, 0, 0, 0.5);
+					    	color: #fff;
+					    	font-family: "proxima_nova_rgregular";
+					    	font-size: 14px;
+					    }
+					    ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+					    	font-style: italic;
+					    	color: #4877B5;
+					    }
+					}
+					.xcdk {
+						font-size: 13px !important;
+						color: #fff !important;
+						margin: 0px;
+						letter-spacing: .5px;
+						font-weight: 500;
+						margin-top: 3px;
+						font-family: "proxima_nova_rgregular";
+						border:none;
+					}
+					.btn_tr {
+						.gfro {
+							font-size: 12px;
+							color: #fff;
+							margin-right: 10px;
+						}
+					}
+				}
+				.add_utang_isi {
+					border-bottom-right-radius: 3px;
+					border-bottom-left-radius: 3px;
+					position: relative;
+					.user_choose {
+						text-align: center;
+						.item {
+							border:none !important;
+							margin:0;
+							.item-content {
+								background-color: #5A92DC;
+								padding: 0px;
+								padding-top: 10px;
+								padding-bottom: 10px;
+								img {
+									border-radius: 100%;
+									/*border:3px solid #fff;*/
+									-webkit-box-shadow: 2px 3px 6px -7px rgba(0, 0, 0, 0.5);
+									-moz-box-shadow: 2px 3px 6px -7px rgba(0, 0, 0, 0.5);
+									box-shadow: inset 2px 3px 6px -7px rgba(0, 0, 0, 0.5);
+								}
+								.nabe {
+									color: #4877B5;
+									font-size: 14px;
+									font-family: "proxima_novasemibold";
+								}
+							}
+							.radio-icon {
+								position: absolute;
+								top: 41px;
+								left: 53% !important;
+								right: auto;
+								z-index: 3;
+								padding: 2px 6px;
+								height: auto !important;
+								border-radius: 20px;
+								font-size: 12px;
+								background-color: #E0EDFF;
+								color: #FFFFFF;
+								box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+							}
+						}
+					}
+					.form_add_utg {
+						.for_if {
+							background-color: #fff;
+							padding: 5px 0px;
+							.jml_utg_, .tgl_payment {
+								padding: 5px 20px;
+								.inpt_utgs, .payment_date {
+									padding-left: 40px;
+									background-color: #F9F9F9;
+									border-radius: 4px;
+									width: 240px;
+									-webkit-box-shadow: 2px 3px 6px -7px rgba(0, 0, 0, 0.6);
+							    	-moz-box-shadow: 2px 3px 6px -7px rgba(0, 0, 0, 0.6);
+							    	box-shadow: inset 2px 3px 6px -7px rgba(0, 0, 0, 0.6);
+							    	color: #535353;
+							    	font-family: "proxima_nova_rgregular";
+							    	font-size: 14px;
+								}
+								::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+									font-style: italic;
+									color: #dedede;
+								}
+							}
+							.icob {
+								font-family: "Ionicons";
+								color: #dedede;
+								font-size: 20px;
+								margin-top: 7px;
+								position: absolute;
+								margin-left: 10px;
+							}
+							.jml_utg_ {
+								&:before {
+									content:"\f272";
+									@extend .icob;
+								}
+							}
+							.tgl_payment {
+								&:before {
+									content:"\f35a";
+									@extend .icob;
+								}
+							}
+							.btn_add, .btn_cancel {
+								float: left;
+								width: 50%;
+								text-align: center;
+								padding: 20px 0px;
+								.bts_x {
+									color: #fff;
+									background-color: #F58562;
+									border: none;
+									padding: 8px 25px;
+									font-size: 12px;
+									border-radius: 20px;
+									font-family: "proxima_nova_rgbold";
+								}
+								.bts_u {
+									color: #fff;
+									background-color: #3770bc;
+									border: none;
+									padding: 8px 35px;
+									font-size: 12px;
+									border-radius: 20px;
+									font-family: "proxima_nova_rgbold";
+								}
+							}
 						}
 					}
 				}
