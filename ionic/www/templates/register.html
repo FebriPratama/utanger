@@ -5,34 +5,40 @@
 	<div class="txt">
 		<h2 class="txt-logo">utanger's</h2>
 	</div>
-	<div class="dta_ipt dta_reg_inpt">
-		<span class="item item-input item-name">
-			<input type="text" placeholder="your name">
-		</span>
-		<span class="item item-input item-addd">
-			<input type="text" placeholder="phone number">
-		</span>
-		<span class="item item-input item-email">
-			<input type="email" placeholder="example@mail.me">
-		</span>
-		<div class="row broo">
-			<div class="col col-50 left_pass">
-				<span class="item item-input item-passwd">
-					<input type="password" placeholder="pass">
-				</span>
-			</div>
-			<div class="col col-50 right_pass">
-				<span class="item item-input item-passwd item-repeat">
-					<input type="password" placeholder="again">
-				</span>
+	<form name="user" ng-submit="submitRegister(user)" novalidate>
+		<ul ng-if="errors.length">
+			<li>Validation Errors</li>
+			<li ng-repeat="data in errors">{{ data.data }}</li>
+		</ul>
+		<div class="dta_ipt dta_reg_inpt">
+			<span class="item item-input item-name">
+				<input type="text" ng-model="user.name" placeholder="your name" required>
+			</span>
+			<span class="item item-input item-addd">
+				<input type="text" ng-model="user.phone" placeholder="phone number" required>
+			</span>
+			<span class="item item-input item-email">
+				<input type="email" ng-model="user.email" placeholder="example@mail.me" required>
+			</span>
+			<div class="row broo">
+				<div class="col col-50 left_pass">
+					<span class="item item-input item-passwd">
+						<input type="password" ng-model="user.pswd" placeholder="pass" required>
+					</span>
+				</div>
+				<div class="col col-50 right_pass">
+					<span class="item item-input item-passwd">
+						<input type="password" ng-model="user.password" placeholder="again" required>
+					</span>
+				</div>
 			</div>
 		</div>
-	</div>
-	<div class="log_btn btn_i">
-		<button class="login_u reg_s">SIGN UP</button>
-	</div>
+		<div class="log_btn btn_i">
+			<button type="submit" ng-disabled="user.$invalid || loading.status" class="login_u reg_s">{{ loading.name }}</button>
+		</div>
+	</form>
 	<div class="ques ques-reg">
-		<p>Have an Account? <a href="#/login">Log In</a></p>
+		<p>Have an Account? <a ui-sref="home.login">Log In</a></p>
 	</div>
 	</ion-content>
 </ion-pane>

@@ -1,0 +1,45 @@
+<ion-side-menus>
+	<ion-side-menu side="left" class="side_bg_mnu">
+
+		<div ng-controller="NavCtrl">
+			<div class="bar bar-header bar-light user_pro">
+				<input type="text" placeholder="Search here..." class="sch_here">
+			</div>
+			<div class="profile_ema">
+				<img src="{{ user.user_img_profile }}" alt="{{ user.user_fullname }}">
+				<div class="ema_name">
+					<h2>{{ user.user_fullname }}</h2>
+					<p class="location">{{ user.user_address ? user.user_address : 'No Address Yet' }}</p>
+				</div>
+			</div>
+			<div class="info_fol">
+				<div class="fol xcd">
+					<span class="jml fos">1287</span>
+					<!-- <p>Followers</p> -->
+				</div>
+				<div class="utg xcd">
+					<span class="jml">5</span>
+					<!-- <p>Utang</p> -->
+				</div>
+				<div class="foling xcd">
+					<span class="jml">453</span>
+					<!-- <p>Following</p> -->
+				</div>
+				<div class="clear"></div>
+			</div>
+			<div class="info_gdf">
+				<ul class="log_is">
+					<li class="home" ui-sref-active="andact"><a ui-sref="member.tabs.utang">Home</a><span class="arrow_ ion-ios-arrow-right"></span></li>
+					<li class="notif" ui-sref-active="andact"><a ui-sref="member.tabs.notif">Notifications</a><span class="kh">4</span></li>
+					<li class="message" ui-sref-active="andact"><a ui-sref="member.tabs.chat_list">Messages</a><span class="kh">2</span></li>
+					<li class="sett" ui-sref-active="andact"><a href="#">Setting</a><span class="arrow_ ion-ios-arrow-right"></span></li>
+					<li class="logout"><a href="javascript:void(0)" ng-click="logout()">Logout</a></li>
+				</ul>
+			</div>
+		</div>
+
+	</ion-side-menu>
+	<ion-side-menu-content>
+		<ion-nav-view></ion-nav-view>
+	</ion-side-menu-content>
+</ion-side-menus>

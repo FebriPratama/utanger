@@ -4,7 +4,11 @@
   "proxies": [
     {
       "path": "/pub",
-      "proxyUrl": "http://localhost:8000"
+      "proxyUrl": "http://utanger.febripratama.me/pub"
+    },
+    {
+      "path": "/api",
+      "proxyUrl": "http://utanger.febripratama.me/api"
     }
   ]
 }
