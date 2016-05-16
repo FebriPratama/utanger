@@ -1,5 +1,9 @@
 // Ionic Starter App
 
+/* change it before build */
+var api = 'http://localhost:8100/api';
+var pub = 'http://localhost:8100/pub';
+
 // angular.module is a global place for creating, registering and retrieving Angular modules
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
@@ -28,35 +32,58 @@ var utanger = angular.module('starter', ['ionic', 'ngCookies','angularMoment'])
   $stateProvider
   .state('home', {
     url: '/home',
+    abstract: true,
     templateUrl: 'templates/home.html',
-    controller: 'HomeCtrl'
+    onEnter : function(Auth,$state){
+      
+      Auth.isLoggedIn().success(function(data){
+
+        $state.go('member.tabs.utang');
+
+      });
+
+    }
   })
-  .state('login', {
+  .state('home.login', {
     url: '/login',
     templateUrl: 'templates/login.html',
     controller: 'LoginCtrl'
   })
-  .state('register', {
+  .state('home.activate', {
+    url: '/activate',
+    templateUrl: 'templates/activate.html',
+    controller: 'ActivateCtrl'
+  })
+  .state('home.register', {
     url: '/register',
     templateUrl: 'templates/register.html',
     controller: 'RegCtrl'
   })
-  .state('chat', {
+  .state('member', {
+    url: '/member',
+    abstract: true,
+    templateUrl: 'templates/member.html',
+    onEnter : function(Auth,$state){
+      
+      Auth.isLoggedIn().error(function(){
+        
+        $state.go('home.login');
+
+      });
+
+    }
+  })
+  .state('member.chat', {
     url: '/chat',
     templateUrl: 'templates/chat.html',
     controller: 'ChatCtrl'
   })
-  .state('profile', {
-    url: '/profile',
-    templateUrl: 'templates/profile.html',
-    controller: 'ProfileCtrl'
-  })
-  .state('tabs', {
+  .state('member.tabs', {
     url: '/tabs',
     abstract: true,
     templateUrl: 'templates/tabs.html'
   })
-  .state('tabs.utang', {
+  .state('member.tabs.utang', {
     url: '/utang',
     views: {
       'utang-tab': {
@@ -65,7 +92,7 @@ var utanger = angular.module('starter', ['ionic', 'ngCookies','angularMoment'])
       }
     }
   })
-  .state('tabs.chat_list', {
+  .state('member.tabs.chat_list', {
     url: '/chat_list',
     views: {
       'chat_list-tab': {
@@ -73,7 +100,7 @@ var utanger = angular.module('starter', ['ionic', 'ngCookies','angularMoment'])
       }
     }
   })
-  .state('tabs.notif', {
+  .state('member.tabs.notif', {
     url: '/notif',
     views: {
       'notif-tab': {
@@ -81,7 +108,7 @@ var utanger = angular.module('starter', ['ionic', 'ngCookies','angularMoment'])
       }
     }
   })
-  .state('tabs.follower', {
+  .state('member.tabs.follower', {
     url: '/follower',
     views: {
       'follower-tab': {
@@ -89,7 +116,8 @@ var utanger = angular.module('starter', ['ionic', 'ngCookies','angularMoment'])
       }
     }
   })
-  $urlRouterProvider.otherwise('/home');
+
+  $urlRouterProvider.otherwise('/home/login');
 
 })
 
@@ -102,9 +130,8 @@ var utanger = angular.module('starter', ['ionic', 'ngCookies','angularMoment'])
 
 .constant('ApiEndpoint', {
 
-    url: 'http://localhost:8000/api',
-    main: 'http://localhost:8000/',
-    local: 'http://localhost:8100/pub'
+    api: api,
+    pub: pub
 
 })
 

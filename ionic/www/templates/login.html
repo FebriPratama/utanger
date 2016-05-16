@@ -5,19 +5,26 @@
 	<div class="txt">
 		<h2 class="txt-logo">utanger's</h2>
 	</div>
-	<div class="dta_ipt">
-		<span class="item item-input item-email">
-			<input type="email" ng-model="user.email" placeholder="example@mail.me">
-		</span>
-		<span class="item item-input item-passwd">
-			<input type="password" ng-model="user.password" placeholder="password">
-		</span>
-	</div>
-	<div class="log_btn btn_i">
-		<button type="button" class="login_u" ng-click="login()" ng-disabled="loading.status">{{ loading.name }}</button>
-	</div>
+
+	<form name="user" ng-submit="submitLogin(user)" novalidate>
+		<div class="dta_ipt">
+
+			<span class="item item-input item-email">
+				<input type="email" ng-model="user.email" placeholder="example@mail.me" required>
+			</span>
+			<span class="item item-input item-passwd">
+				<input type="password" ng-model="user.password" placeholder="password" required>
+			</span>
+			
+		</div>
+		<div class="log_btn btn_i">
+			<button type="submit" class="btn login_u" ng-disabled="user.$invalid || loading.status">{{ loading.name }}</button>
+		</div>
+	</form>
+
 	<div class="ques">
-		<p>Don’t have account? <a href="#/register">Sign up</a></p>
+		<p>Don’t have account? <a ui-sref="home.register">Sign up</a></p>
+		<p>Activate your account ? <a ui-sref="home.activate">Activate</a></p>
 	</div>
 	</ion-content>
 </ion-pane>

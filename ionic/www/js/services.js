@@ -21,7 +21,7 @@ utanger.factory('Auth', function($q, $localStorage,$http,ApiEndpoint) {
             var deferred = $q.defer();
             var promise = deferred.promise;
 
-            var local = $localStorage.getObject('ut.user') ? true : false;
+            var local = $localStorage.getObject('ut.user').user ? true : false;
 
             if(local){
 
@@ -94,10 +94,19 @@ utanger.factory('Auth', function($q, $localStorage,$http,ApiEndpoint) {
 
         login : function(data) {
 
-              return $http.post(ApiEndpoint.local+'/login',data);
+              return $http.post(ApiEndpoint.pub+'/login',data);
+        
+        },
+        register : function(data) {
+
+              return $http.post(ApiEndpoint.pub+'/register',data);
+        
+        },
+        activate : function(data) {
+
+              return $http.post(ApiEndpoint.pub+'/validation',data);
         
         }
-
       }
 
   });
