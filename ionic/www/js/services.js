@@ -102,6 +102,11 @@ utanger.factory('Auth', function($q, $localStorage,$http,ApiEndpoint) {
               return $http.post(ApiEndpoint.pub+'/register',data);
         
         },
+        notifications : function(token) {
+
+              return $http.get(ApiEndpoint.pub+'user/'+token+'/notif');
+        
+        },
         activate : function(data) {
 
               return $http.post(ApiEndpoint.pub+'/validation',data);

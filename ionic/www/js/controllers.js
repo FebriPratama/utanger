@@ -57,6 +57,7 @@ utanger
 			if(data.status){
 
 				Auth.setUser(data.data);
+				Auth.setToken(data.token);
 				if(data.status) $state.go('member.tabs.utang');
 
 			}			
