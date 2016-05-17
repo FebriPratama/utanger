@@ -90,8 +90,29 @@ utanger.factory('Auth', function($q, $localStorage,$http,ApiEndpoint) {
 
 }]).factory('User', function($http,ApiEndpoint) {
 
-      return {
+      var friendData = [];
 
+      return {
+        search : function(data) {
+
+              return $http.get(ApiEndpoint.api+'/data/user',{ params : data });
+        
+        },
+        singleUser : function(token) {
+
+              return $http.get(ApiEndpoint.api+'/user/'+token);
+        
+        },
+        getFriend : function(token) {
+
+              return $http.get(ApiEndpoint.api+'/friend/'+token);
+        
+        },
+        addFriend : function(token,data) {
+
+              return $http.post(ApiEndpoint.api+'/friend/'+token+'/add',data);
+        
+        },
         login : function(data) {
 
               return $http.post(ApiEndpoint.pub+'/login',data);
@@ -104,7 +125,7 @@ utanger.factory('Auth', function($q, $localStorage,$http,ApiEndpoint) {
         },
         notifications : function(token) {
 
-              return $http.get(ApiEndpoint.pub+'user/'+token+'/notif');
+              return $http.get(ApiEndpoint.api+'/user/'+token+'/notif');
         
         },
         activate : function(data) {

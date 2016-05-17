@@ -12,111 +12,71 @@
 	</div>
 	<ion-content>
 		<div class="sch_frien">
-			<input type="search" placeholder="Search person here..." class="ingfre">
-			<button class="clauy">
-				<span class="ion-android-send"></span>
-			</button>
+
+			<form name="userSearch" ng-submit="submitUserSearch(userSearch.email)" novalidate>
+				<input type="email" style="height:40px;width:100%" ng-model="userSearch.email" placeholder="Enter friends email" class="ingfre">
+				<button type="submit" ng-disabled="userSearch.$invalid || loading.status" class="clauy">
+					<span class="ion-android-send"></span>
+				</button>
+			</form>
+			<div class="clear"></div>
+			<div style="text-align:center" ng-if="loading.status">
+				<i>{{ loading.name }}</i>
+			</div>
+
 		</div>
 		<div class="friend_lst">
+
+			<div style="text-align:center">
+				<i ng-if="!users.length">No Users Found</i>
+			</div>
+			
 			<div class="frdlist">
-				<div class="fir_content">
-					<div class="cjg">
-						<span class="ion-checkmark-round"></span>
+				<div class="row">
+					<div class="fir_content" ui-sref="member.profile({ id : data.user_id })" ng-repeat="data in users">
+						<div class="cjg">
+							<span class="ion-checkmark-round"></span>
+						</div>
+						<a href="javascript:void(0)">
+							<img src="{{ data.user_img_profile }}" style="width:50px;" alt="{{ data.user_fullname }}" class="fgtr">
+							<h2 class="nbgf">{{ data.user_fullname }}</h2>
+						</a>
 					</div>
-					<a href="#/profile">
-						<img src="../img/jobs.png" alt="" class="fgtr">
-						<h2 class="nbgf">Steve Jobs</h2>
-					</a>
 				</div>
+				<hr>
+			</div>
+			<div class="row">
+
+			  <div class="col col-33 col-offset-33" style="text-align:center">Friend List</div>
+
 			</div>
 			<div class="frdlist">
-				<div class="fir_content">
-					<div class="cjg">
-						<span class="ion-checkmark-round"></span>
+				<div style="text-align:center">
+					<small ng-if="!friends.length">No Friends Found</small>
+				</div>
+				<div class="row">
+
+					<div ng-repeat="data in friends">
+						<div class="fir_content col" ng-if="data.one.email !== user.email" ui-sref="member.profile({ id : data.one.user_id })">
+							<a>
+								<img src="{{ data.one.user_img_profile }}" style="width:50px;" alt="{{ data.one.user_fullname }}" class="fgtr">
+								
+							</a>
+							<i class="nbgf">{{ data.one.user_fullname }}</i>
+						</div>
+						<div class="fir_content col" ng-if="data.two.email !== user.email" ui-sref="member.profile({ id : data.two.user_id })">
+							<a>
+								<img src="{{ data.two.user_img_profile }}" style="width:50px;" alt="{{ data.two.user_fullname }}" class="fgtr">
+								
+							</a>
+							<i class="nbgf">{{ data.two.user_fullname }}</i>
+						</div>
+
 					</div>
-					<a href="#/profile">
-						<img src="../img/wozniak.png" alt="" class="fgtr">
-						<h2 class="nbgf">Steve Wozniak</h2>
-					</a>
+
 				</div>
 			</div>
-			<div class="frdlist">
-				<div class="fir_content">
-					<div class="cjg">
-						<span class="ion-checkmark-round"></span>
-					</div>
-					<a href="#/profile">
-						<img src="../img/bill.png" alt="" class="fgtr">
-						<h2 class="nbgf">Bill Gates</h2>
-					</a>
-				</div>
-			</div>
-			<div class="frdlist">
-				<div class="fir_content">
-					<div class="cjg">
-						<span class="ion-plus-round"></span>
-					</div>
-					<a href="#/profile">
-						<img src="../img/elon.png" alt="" class="fgtr">
-						<h2 class="nbgf">Elon Musk</h2>
-					</a>
-				</div>
-			</div>
-			<div class="frdlist">
-				<div class="fir_content">
-					<div class="cjg">
-						<span class="ion-checkmark-round"></span>
-					</div>
-					<a href="#/profile">
-						<img src="../img/larrypage.png" alt="" class="fgtr">
-						<h2 class="nbgf">Larry Page</h2>
-					</a>
-				</div>
-			</div>
-			<div class="frdlist">
-				<div class="fir_content">
-					<div class="cjg">
-						<span class="ion-checkmark-round"></span>
-					</div>
-					<a href="#/profile">
-						<img src="../img/mark.png" alt="" class="fgtr">
-						<h2 class="nbgf">Mark Zuckerberg</h2>
-					</a>
-				</div>
-			</div>
-			<div class="frdlist">
-				<div class="fir_content">
-					<div class="cjg">
-						<span class="ion-plus-round"></span>
-					</div>
-					<a href="#/profile">
-						<img src="../img/twite.png" alt="" class="fgtr">
-						<h2 class="nbgf">Jack Dorsey</h2>
-					</a>
-				</div>
-			</div>
-			<div class="frdlist">
-				<div class="fir_content">
-					<div class="cjg">
-						<span class="ion-checkmark-round"></span>
-					</div>
-					<a href="#/profile">
-						<img src="../img/richard_br.png" alt="" class="fgtr">
-						<h2 class="nbgf">Richard Branson</h2>
-					</a>
-				</div>
-			</div>
-			<div class="frdlist">
-				<div class="fir_content">
-					<div class="cjg">
-						<span class="ion-plus-round"></span>
-					</div>
-					<a href="#/profile">
-						<img src="../img/linus.png" alt="" class="fgtr">
-						<h2 class="nbgf">Linus Torvald</h2>
-					</a>
-				</div>
-			</div>
+
 			<div class="clear"></div>
 		</div>
 	</ion-content>

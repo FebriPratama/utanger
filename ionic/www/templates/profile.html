@@ -13,13 +13,13 @@
 			<div class="row">
 				<div class="col">
 					<div class="foll_and vf">
-						<button class="btn_foll"><span class="ion-android-person-add"></span></button>
+						<button class="btn_foll" ng-click="addFriend(profile)"><span class="ion-android-person-add"></span></button>
 					</div>
 				</div>
 				<div class="col col-50 img_ctr">
-					<img src="../img/emas.png" class="pr_img" alt="">
-					<p class="ngr">Ema Watson</p>
-					<p class="ader">Condong Catur, Depok</p>
+					<img src="{{ profile.user_img_profile }}" class="pr_img" alt="{{ profile.user_fullname }}">
+					<p class="ngr">{{ profile.user_fullname }}</p>
+					<p class="ader">{{ profile.user_address ? profile.user_address : 'Not Set Yet' }}</p>
 				</div>
 				<div class="col">
 					<div class="msg_and vf">

@@ -167,7 +167,7 @@ utanger
 .controller('RegCtrl', function($scope,$state,User,$ionicPopup){
 
 	$scope.loading = { name : 'SIGN UP', status : false};
-	$scope.erros = [];
+	$scope.errors = [];
 
 	$scope.submitRegister = function(data){
 
@@ -211,6 +211,107 @@ utanger
 
 
 })
+.controller('FriendCtrl', function($scope,$state,User,Auth,$ionicPopup){
+
+	$scope.loading = { name : 'SIGN UP', status : false};
+	$scope.errors = [];
+	$scope.users = [];
+	$scope.friends = [];
+
+	$scope.user = Auth.getUser().user;
+
+	// get friend list
+	User.getFriend($scope.user.user_id).success(function(data){
+
+		if(data.status) $scope.friends = data.data;
+
+	}).error(function(){
+
+		$ionicPopup.alert({
+		     title: 'Warning',
+		     template: 'Please check your internet connection'
+		   });
+
+	});
+
+	$scope.submitUserSearch = function(data){
+
+		$scope.loading = { name : 'Loading . .', status : true};
+
+		User.search({ email : data }).success(function(data){
+
+			$scope.loading = { name : 'SIGN UP', status : false};
+
+			$scope.users = data.data
+
+		}).error(function(data){
+
+			$scope.loading = { name : 'SIGN UP', status : false};
+			$ionicPopup.alert({
+			     title: 'Warning',
+			     template: 'Please check your internet connection'
+			   });
+
+		});
+
+	}
+
+})
 .controller('UtangCtrl', function(){})
-.controller('ProfileCtrl', function(){})
+.controller('ProfileCtrl', function($scope,Auth,$state,User,$timeout,$stateParams,$ionicPopup){
+
+	$scope.profile = {};
+	$scope.user = Auth.getUser().user;
+
+	if($stateParams.id){
+		User.singleUser($stateParams.id).success(function(data){
+
+			$scope.profile = data.user;
+
+		}).error(function(data){
+
+			$ionicPopup.alert({
+			     title: 'Warning',
+			     template: 'Please check your internet connection'
+			   });
+
+		});
+	}
+	
+	$scope.addFriend = function(data){
+
+		$ionicPopup.confirm({
+
+		     title: 'Confirmation',
+		     template: 'Are you sure you want to add' + data.user_fullname + ' as friend ?'
+
+		   }).then(function(res) {
+
+		     if(res) {
+
+				User.addFriend($scope.user.user_id,{ friend : data.user_id }).success(function(data){
+
+					$ionicPopup.alert({
+					     title: data.status ? 'Success' : 'Warning',
+					     template: data.message
+					   });
+					
+					if(data.status) $timeout(function(){ $state.go('member.tabs.follower') },500);
+
+				}).error(function(){
+
+					$ionicPopup.alert({
+					     title: 'Warning',
+					     template: 'Please check your internet connection'
+					   });
+
+				});
+
+		     }
+
+		   });
+
+	}
+
+})
 .controller('ChatCtrl', function(){});

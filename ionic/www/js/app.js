@@ -100,6 +100,16 @@ var utanger = angular.module('starter', ['ionic', 'ngCookies','angularMoment'])
       }
     }
   })
+  .state('member.profile', {
+    url: '/profile/:id',
+    templateUrl: 'templates/profile.html',
+    controller : 'ProfileCtrl',
+    onEnter : function($stateParams,$state){
+      
+      if(!$stateParams.id) $state.go('member.tabs.follower');
+
+    }
+  })
   .state('member.tabs.notif', {
     url: '/notif',
     views: {
@@ -112,7 +122,8 @@ var utanger = angular.module('starter', ['ionic', 'ngCookies','angularMoment'])
     url: '/follower',
     views: {
       'follower-tab': {
-        templateUrl: 'templates/follower.html',
+        controller: 'FriendCtrl',
+        templateUrl: 'templates/follower.html'
       }
     }
   })
