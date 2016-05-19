@@ -108,6 +108,13 @@ utanger.factory('Auth', function($q, $localStorage,$http,ApiEndpoint) {
               return $http.get(ApiEndpoint.api+'/friend/'+token);
         
         },
+
+        getConversations : function(token) {
+
+              return $http.get(ApiEndpoint.api+'/message/'+token);
+        
+        },
+
         addFriend : function(token,data) {
 
               return $http.post(ApiEndpoint.api+'/friend/'+token+'/add',data);
@@ -131,6 +138,51 @@ utanger.factory('Auth', function($q, $localStorage,$http,ApiEndpoint) {
         activate : function(data) {
 
               return $http.post(ApiEndpoint.pub+'/validation',data);
+        
+        }
+      }
+
+  }).factory('Utang', function($http,ApiEndpoint) {
+
+      var utangData = [];
+
+      return {
+        setData : function(){
+          utangData = data;
+        },
+        setDataSingle : function(){
+          utangData.unshift(data);
+        },
+        getData : function(){
+          return utangData;
+        },
+        removeData : function(data){
+          for(var i; i < utangData.length; i++){
+            
+            if(utangData[i].id == data.id) utangData.splice(i,1);
+
+          }
+        },
+        updateData : function(data){
+          for(var i; i < utangData.length; i++){
+            
+            if(utangData[i].id == data.id) utangData[i] = data;
+
+          }
+        },
+        setDone : function(){
+            
+            return $http.post(ApiEndpoint.pub+'/validation',data);
+
+        },
+        getUtang : function(from) {
+
+              return $http.get(ApiEndpoint.api+'/utang/'+from);
+        
+        },
+        saveUtang : function(from,to,data) {
+
+              return $http.post(ApiEndpoint.pub+'/utang/'+from+'/store/'+to,data);
         
         }
       }

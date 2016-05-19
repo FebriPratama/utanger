@@ -3,10 +3,12 @@
 
 		<div ng-controller="NavCtrl">
 			<div class="bar bar-header bar-light user_pro">
-				<input type="text" placeholder="Search here..." class="sch_here">
+				<div class="h1 title title_tab">
+					UTANGER
+				</div>
 			</div>
 			<div class="profile_ema">
-				<img src="{{ user.user_img_profile }}" alt="{{ user.user_fullname }}">
+				<img ng-src="{{ user.user_img_profile }}" alt="{{ user.user_fullname }}">
 				<div class="ema_name">
 					<h2>{{ user.user_fullname }}</h2>
 					<p class="location">{{ user.user_address ? user.user_address : 'No Address Yet' }}</p>

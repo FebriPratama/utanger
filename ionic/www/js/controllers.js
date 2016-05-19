@@ -35,6 +35,7 @@ utanger
    $scope.$on('modal.removed', function() {
       // Execute action
   });
+   /*
     // map 
    function initialize() {
    	var myLatlng = new google.maps.LatLng(-7.79009,110.3618989);
@@ -86,7 +87,7 @@ utanger
     		alert('Unable to get location: ' + error.message);
     	});
     };
-
+	*/
     $scope.clickTest = function() {
     	alert('Example of infowindow with ng-click')
     };
@@ -128,6 +129,35 @@ utanger
 
 
 		});
+
+	}
+
+})
+.controller('AddUtangCtrl', function($scope,$state,User,$ionicPopup,Auth){
+
+	$scope.loading = { name : 'Log In', status : false};
+	$scope.friends = [];
+	$scope.user = Auth.getUser().user;
+
+	// get friend list
+	User.getFriend($scope.user.user_id).success(function(data){
+
+		if(data.status) $scope.friends = data.data;
+
+	}).error(function(){
+
+		$ionicPopup.alert({
+		     title: 'Warning',
+		     template: 'Please check your internet connection'
+		   });
+
+	});
+
+	$scope.submitCreateUtang = function(valid,data){
+
+		if(valid){
+			
+		}
 
 	}
 
@@ -234,25 +264,28 @@ utanger
 
 	});
 
-	$scope.submitUserSearch = function(data){
+	$scope.submitUserSearch = function(valid,data){
 
-		$scope.loading = { name : 'Loading . .', status : true};
+		if(valid){
+			$scope.loading = { name : 'Loading . .', status : true};
 
-		User.search({ email : data }).success(function(data){
+			User.search({ email : data }).success(function(data){
 
-			$scope.loading = { name : 'SIGN UP', status : false};
+				$scope.loading = { name : 'SIGN UP', status : false};
 
-			$scope.users = data.data
+				$scope.users = data.data
 
-		}).error(function(data){
+			}).error(function(data){
 
-			$scope.loading = { name : 'SIGN UP', status : false};
-			$ionicPopup.alert({
-			     title: 'Warning',
-			     template: 'Please check your internet connection'
-			   });
+				$scope.loading = { name : 'SIGN UP', status : false};
+				$ionicPopup.alert({
+				     title: 'Warning',
+				     template: 'Please check your internet connection'
+				   });
 
-		});
+			});			
+		}
+
 
 	}
 
@@ -314,4 +347,21 @@ utanger
 	}
 
 })
-.controller('ChatCtrl', function(){});
+.controller('ChatCtrl', function($scope,Auth,$state,User,$timeout,$stateParams,$ionicPopup){
+
+	$scope.convs = [];
+
+	User.getConversations(Auth.getUser().user.user_id).success(function(data){
+
+		$scope.convs= data.aaData;
+
+	}).error(function(data){
+
+		$ionicPopup.alert({
+		     title: 'Warning',
+		     template: 'Please check your internet connection'
+		   });
+
+	});
+
+});
