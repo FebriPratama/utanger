@@ -115,7 +115,26 @@ utanger
 
 				Auth.setUser(data.data);
 				Auth.setToken(data.token);
-				if(data.status) $state.go('member.tabs.utang');
+
+				// get friend list
+				User.getFriend(data.data.user.user_id).success(function(data){
+
+					if(data.status){
+						
+						User.setFriendData(data.data);
+
+						$state.go('member.tabs.utang');
+					
+					}
+
+				}).error(function(){
+
+					$ionicPopup.alert({
+					     title: 'Warning',
+					     template: 'Please check your internet connection'
+					   });
+
+				});				
 
 			}			
 
@@ -138,25 +157,18 @@ utanger
 	$scope.loading = { name : 'Log In', status : false};
 	$scope.friends = [];
 	$scope.user = Auth.getUser().user;
+	
+	/* monitors total item */
+	$scope.$watch(function(){ return User.getFriendData();},function(val){
 
-	// get friend list
-	User.getFriend($scope.user.user_id).success(function(data){
-
-		if(data.status) $scope.friends = data.data;
-
-	}).error(function(){
-
-		$ionicPopup.alert({
-		     title: 'Warning',
-		     template: 'Please check your internet connection'
-		   });
-
+		$scope.friends = val;
+		
 	});
 
 	$scope.submitCreateUtang = function(valid,data){
 
 		if(valid){
-			
+
 		}
 
 	}
@@ -250,18 +262,11 @@ utanger
 
 	$scope.user = Auth.getUser().user;
 
-	// get friend list
-	User.getFriend($scope.user.user_id).success(function(data){
+	/* monitors total item */
+	$scope.$watch(function(){ return User.getFriendData();},function(val){
 
-		if(data.status) $scope.friends = data.data;
-
-	}).error(function(){
-
-		$ionicPopup.alert({
-		     title: 'Warning',
-		     template: 'Please check your internet connection'
-		   });
-
+		$scope.friends = val;
+		
 	});
 
 	$scope.submitUserSearch = function(valid,data){

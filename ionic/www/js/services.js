@@ -93,6 +93,29 @@ utanger.factory('Auth', function($q, $localStorage,$http,ApiEndpoint) {
       var friendData = [];
 
       return {
+        setFriendData : function(data){
+          friendData = data;
+        },
+        setFriendDataSingle : function(data){
+          friendData.unshift(data);
+        },
+        getFriendData : function(){
+          return friendData;
+        },
+        removeFriendData : function(data){
+          for(var i; i < friendData.length; i++){
+            
+            if(friendData[i].id == data.id) friendData.splice(i,1);
+
+          }
+        },
+        updateFriendData : function(data){
+          for(var i; i < friendData.length; i++){
+            
+            if(friendData[i].id == data.id) friendData[i] = data;
+
+          }
+        },
         search : function(data) {
 
               return $http.get(ApiEndpoint.api+'/data/user',{ params : data });
@@ -147,10 +170,10 @@ utanger.factory('Auth', function($q, $localStorage,$http,ApiEndpoint) {
       var utangData = [];
 
       return {
-        setData : function(){
+        setData : function(data){
           utangData = data;
         },
-        setDataSingle : function(){
+        setDataSingle : function(data){
           utangData.unshift(data);
         },
         getData : function(){
