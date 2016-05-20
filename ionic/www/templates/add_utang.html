@@ -1,38 +1,49 @@
 <ion-pane class="add_utg_bg">
+
 	<div class="isi_utr">
 		<div class="bar bar-header ads_utg">
 			<div class="sch_from">
-				<input type="text" placeholder="Search borrower..." class="borr">
+				<input type="text" ng-model="query" placeholder="Search borrower..." class="borr">
 			</div>		
 		</div>
 		<div class="add_utang_isi">
-			<div class="user_choose">
-				<ion-radio ng-model="choice" ng-value="'A'">
-					<img src="../img/noname.png" alt="">
-					<p class="nabe">Borrower</p>
-				</ion-radio>
-			</div>
-			<div class="form_add_utg">
-				<div class="for_if">
-					<div class="jml_utg_">
-						<input type="text" placeholder="jumlah utang" class="inpt_utgs">
+
+			<form name="createUtang" ng-submit="submitCreateUtang(createUtang.$valid,createUtang)" novalidate>
+				<ion-list can-swipe="true">
+					<ion-item ng-if="!friends.length">
+						No Friends Yet
+					</ion-item>
+				  <ion-item ng-repeat="data in friends | filter:query">
+					<ion-radio ng-model="createUtang.to" ng-if="data.one.email !== user.email" ng-required="data.one.email !== user.email" ng-value="data.one.user_id">{{ data.one.user_fullname }}</ion-radio>
+					<ion-radio ng-model="createUtang.to" ng-if="data.two.email !== user.email" ng-required="data.one.email !== user.email" ng-value="data.two.user_id">{{ data.two.user_fullname }}</ion-radio>
+				  </ion-item>
+				</ion-list>
+				<div class="form_add_utg">
+					<div class="for_if">
+						<div class="jml_utg_">
+							<input type="number" ng-model="createUtang.total" placeholder="jumlah utang" class="inpt_utgs" required>
+						</div>
+						<div class="tgl_payment">
+							<input type="date" ng-model="createUtang.expired"  placeholder="payment date" class="payment_date" required>
+						</div>
+						<div class="jml_utg_">
+							<textarea class="inpt_utgs" ng-model="createUtang.note"  placeholder="Utang Note"></textarea>
+						</div>
+						<div class="btn_add">
+							<button type="submit" class="bts_u">
+								ADD
+							</button>
+						</div>
+						<div class="btn_cancel">
+							<button type="button" class="bts_x" ng-click="closeModal()">
+								CANCEL
+							</button>
+						</div>
+						<div class="clear"></div>
 					</div>
-					<div class="tgl_payment">
-						<input type="text" placeholder="payment date" class="payment_date">
-					</div>
-					<div class="btn_add">
-						<button class="bts_u">
-							ADD
-						</button>
-					</div>
-					<div class="btn_cancel">
-						<button class="bts_x" ng-click="closeModal(1)">
-							CANCEL
-						</button>
-					</div>
-					<div class="clear"></div>
 				</div>
-			</div>
+			</form>
+
 		</div>
 	</div>
 </ion-pane>

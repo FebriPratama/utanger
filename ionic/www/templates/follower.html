@@ -13,9 +13,9 @@
 	<ion-content>
 		<div class="sch_frien">
 
-			<form name="userSearch" ng-submit="submitUserSearch(userSearch.email)" novalidate>
+			<form name="userSearch" ng-submit="submitUserSearch(userSearch.$valid,userSearch.email)" novalidate>
 				<input type="email" style="height:40px;width:100%" ng-model="userSearch.email" placeholder="Enter friends email" class="ingfre">
-				<button type="submit" ng-disabled="userSearch.$invalid || loading.status" class="clauy">
+				<button type="submit" class="clauy">
 					<span class="ion-android-send"></span>
 				</button>
 			</form>
@@ -38,7 +38,7 @@
 							<span class="ion-checkmark-round"></span>
 						</div>
 						<a href="javascript:void(0)">
-							<img src="{{ data.user_img_profile }}" style="width:50px; height:49px; " alt="{{ data.user_fullname }}" class="fgtr">
+							<img ng-src="{{ data.user_img_profile }}" style="width:50px; height:49px; " alt="{{ data.user_fullname }}" class="fgtr">
 							<h2 class="nbgf">{{ data.user_fullname }}</h2>
 						</a>
 					</div>
@@ -59,14 +59,14 @@
 					<div ng-repeat="data in friends">
 						<div class="fir_content col" ng-if="data.one.email !== user.email" ui-sref="member.profile({ id : data.one.user_id })">
 							<a>
-								<img src="{{ data.one.user_img_profile }}" style="width:50px;height:50px;" alt="{{ data.one.user_fullname }}" class="fgtr">
+								<img ng-src="{{ data.one.user_img_profile }}" style="width:50px;height:50px;" alt="{{ data.one.user_fullname }}" class="fgtr">
 								
 							</a>
 							<i class="nbgf">{{ data.one.user_fullname }}</i>
 						</div>
 						<div class="fir_content col" ng-if="data.two.email !== user.email" ui-sref="member.profile({ id : data.two.user_id })">
 							<a>
-								<img src="{{ data.two.user_img_profile }}" style="width:50px;height:50px;" alt="{{ data.two.user_fullname }}" class="fgtr">
+								<img ng-src="{{ data.two.user_img_profile }}" style="width:50px;height:50px;" alt="{{ data.two.user_fullname }}" class="fgtr">
 								
 							</a>
 							<i class="nbgf">{{ data.two.user_fullname }}</i>

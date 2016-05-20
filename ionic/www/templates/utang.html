@@ -15,35 +15,68 @@
 
 		<div class="lst_utang">
 			<div class="sch_frien" style="padding:10px;">
-				<input type="search" style="float:none;" placeholder="Search person here..." class="ingfre">
+				<input type="search" style="float:none;" ng-model="utangQuery" placeholder="Search utang here..." class="ingfre">
 			</div>
-			<div class="utangs_dta">
-				<div class="del">
-					<span class="ion-close-round"></span>
-				</div>
-				<div class="desc">
-					<img src="../img/bill.png" alt="" class="img_f">
-					<h4 class="nam">Bill Gates</h4>
-					<p class="adre">Jl Lely 4, Perumnas Condong Catur, Depok, Sleman DIY </p>
-				</div>
-				<div class="jlkf">
-					<div class="utang">
-						<span>utang</span>
-						<p>$500</p>
+			<div style="text-align:center">
+				<small ng-if="!utangs.length">No Utangs Found</small>
+			</div>
+			<div class="utangs_dta" ng-repeat="data in utangs | filter : utangQuery">
+
+				<div ng-if="data.type == 'pemilik'">
+					<div class="del">
+						<span class="ion-close-round"></span>
 					</div>
-					<div class="status">
-						<span>status</span>
-						<p class="paid">Paid</p>
+					<div class="desc">
+						<img ng-src="{{ data.pemilik.user_img_profile }}" style="width:50px;" alt="{{ data.pemilik.user_fullname }}" class="img_f">
+						<h4 class="nam">{{ data.pemilik.user_fullname }}</h4>
+						<p class="adre">{{ data.pemilik.user_address ? data.pemilik.user_address : 'Not Set'  }}</p>
 					</div>
-					<div class="tgl_kembali">
-						<span>payment</span>
-						<p>August 15</p>
+					<div class="jlkf">
+						<div class="utang">
+							<span>utang</span>
+							<p>{{ data.total | currency : 'Rp.'}}</p>
+						</div>
+						<div class="status">
+							<span>status</span>
+							<p class="paid">{{ data.status }}</p>
+						</div>
+						<div class="tgl_kembali">
+							<span>payment</span>
+							<p>{{ data.pinjam_expired }}</p>
+						</div>
+						<div class="clear"></div>
 					</div>
-					<div class="clear"></div>
 				</div>
+				<div ng-if="data.type == 'peminjam'">
+					<div class="del">
+						<span class="ion-close-round"></span>
+					</div>
+					<div class="desc">
+						<img ng-src="{{ data.peminjam.user_img_profile }}" style="width:50px;" alt="{{ data.peminjam.user_fullname }}" class="img_f">
+						<h4 class="nam">{{ data.peminjam.user_fullname }}</h4>
+						<p class="adre">{{ data.peminjam.user_address ? data.peminjam.user_address : 'Not Set'  }}</p>
+					</div>
+					<div class="jlkf">
+						<div class="utang">
+							<span>utang</span>
+							<p>{{ data.total | currency : 'Rp.'}}</p>
+						</div>
+						<div class="status">
+							<span>status</span>
+							<p class="paid">{{ data.status }}</p>
+						</div>
+						<div class="tgl_kembali">
+							<span>payment</span>
+							<p>{{ data.pinjam_expired }}</p>
+						</div>
+						<div class="clear"></div>
+					</div>
+				</div>
+
 			</div>
 
 		</div>
+
 	</ion-content>
 </ion-pane>
 <script id = "add_utang.html" type = "text/ng-template">

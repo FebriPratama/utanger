@@ -1,5 +1,5 @@
 utanger
-.controller('AppCtrl', function($scope, $ionicSideMenuDelegate, $ionicModal){
+.controller('AppCtrl', function($ionicSideMenuDelegate, $ionicModal,$scope,$state,User,$ionicPopup,Auth,Utang){
 	// slide menu function
 	$scope.toggleLeft = function() {
 		$ionicSideMenuDelegate.toggleLeft();
@@ -8,6 +8,36 @@ utanger
 	//modal add utang
 	// modal 1
 	$ionicModal.fromTemplateUrl('templates/add_utang.html', {
+		scope: $scope,
+		animation: 'slide-in-up'
+	}).then(function(modal) {
+		$scope.modal = modal;
+	});
+	
+	$scope.openModal = function() {
+		$scope.modal.show();
+	};
+	
+	$scope.closeModal = function() {
+		$scope.modal.hide();
+	};
+	
+   //Cleanup the modal when we're done with it!
+   $scope.$on('$destroy', function() {
+   	$scope.modal.remove();
+   });
+
+   // Execute action on hide modal
+   $scope.$on('modal.hidden', function() {
+      // Execute action
+  });
+
+   // Execute action on remove modal
+   $scope.$on('modal.removed', function() {
+      // Execute action
+  });
+   /*
+=======
       id: '1', // We need to use and ID to identify the modal that is firing the event!
       scope: $scope,
       backdropClickToClose: false,
@@ -54,8 +84,8 @@ utanger
       $scope.oModal2.remove();
     });
 
-
     // map 
+  /*
    function initialize() {
    	var myLatlng = new google.maps.LatLng(-7.79009,110.3618989);
 
@@ -106,11 +136,90 @@ utanger
     		alert('Unable to get location: ' + error.message);
     	});
     };
-
+	*/
     $scope.clickTest = function() {
     	alert('Example of infowindow with ng-click')
     };
    // end
+	$scope.loading = { name : 'Log In', status : false};
+	$scope.friends = [];
+	$scope.utangs = [];
+	$scope.user = Auth.getUser().user;
+	
+	/* monitors total item */
+	$scope.$watch(function(){ return User.getFriendData();},function(val){
+
+		$scope.friends = val;
+		
+	});
+
+	$scope.submitCreateUtang = function(valid,data){
+
+		if(valid){
+
+			Utang.saveUtang($scope.user.user_id,data.to,data).success(function(data){
+				
+				if(data.status){
+					
+					Utang.setDataSingle(data.data);
+					$scope.modal.hide();
+
+				}
+
+				$ionicPopup.alert({
+				     title: data.status ? 'Success' : 'Warning',
+				     template: data.message
+				   });
+
+			}).error(function(data){
+
+				$scope.loading = { name : 'Log In', status : false};
+				$ionicPopup.alert({
+				     title: 'Warning',
+				     template: 'Please check your internet connection'
+				   });
+
+			});
+
+		}
+
+	}
+
+	/* monitors total item */
+	$scope.$watch(function(){ return Utang.getData();},function(val){
+
+		$scope.utangs = val;
+		
+	});
+
+})
+.controller('AddUtangCtrl', function($scope,$state,User,$ionicPopup,Auth,Utang){
+
+	$scope.loading = { name : 'Log In', status : false};
+	$scope.friends = [];
+	$scope.user = Auth.getUser().user;
+	
+	/* monitors total item */
+	$scope.$watch(function(){ return User.getFriendData();},function(val){
+
+		$scope.friends = val;
+		
+	});
+
+	$scope.submitCreateUtang = function(valid,data){
+
+		if(valid){
+
+			Utang.saveUtang($scope.user.user_id,data.to,data).success(function(data){
+				
+			}).error(function(data){
+
+			});
+
+		}
+
+	}
+
 })
 .controller('HomeCtrl', function(){})
 .controller('LoginCtrl', function($scope,$state,User,$ionicPopup,Auth){
@@ -134,7 +243,7 @@ utanger
 
 				Auth.setUser(data.data);
 				Auth.setToken(data.token);
-				if(data.status) $state.go('member.tabs.utang');
+				$state.go('member.tabs.utang');			
 
 			}			
 
@@ -218,9 +327,14 @@ utanger
 	}
 
 })
-.controller('NavCtrl', function($scope,$state,User,Auth){
+.controller('NavCtrl', function($scope,$state,User,Auth,Utang){
 	
 	$scope.user = Auth.getUser().user;
+
+	if(Auth.getUser().user){
+		User.setFriendData(Auth.getUser().user.user_friends);
+		Utang.setData(Auth.getUser().user.user_utangs);
+	}	
 
 	$scope.logout = function(){
 
@@ -229,7 +343,18 @@ utanger
 			
 	}
 
+	/* monitors total item */
+	$scope.$watch(function(){ return Auth.getUserData();},function(val){
 
+		if(val.user){
+			
+			User.setFriendData(val.user.user_friends);
+			Utang.setData(val.user.user_utangs);
+
+		}		
+		
+	});
+	
 })
 .controller('FriendCtrl', function($scope,$state,User,Auth,$ionicPopup){
 
@@ -240,39 +365,35 @@ utanger
 
 	$scope.user = Auth.getUser().user;
 
-	// get friend list
-	User.getFriend($scope.user.user_id).success(function(data){
+	/* monitors total item */
+	$scope.$watch(function(){ return User.getFriendData();},function(val){
 
-		if(data.status) $scope.friends = data.data;
-
-	}).error(function(){
-
-		$ionicPopup.alert({
-		     title: 'Warning',
-		     template: 'Please check your internet connection'
-		   });
-
+		$scope.friends = val;
+		
 	});
 
-	$scope.submitUserSearch = function(data){
+	$scope.submitUserSearch = function(valid,data){
 
-		$scope.loading = { name : 'Loading . .', status : true};
+		if(valid){
+			$scope.loading = { name : 'Loading . .', status : true};
 
-		User.search({ email : data }).success(function(data){
+			User.search({ email : data }).success(function(data){
 
-			$scope.loading = { name : 'SIGN UP', status : false};
+				$scope.loading = { name : 'SIGN UP', status : false};
 
-			$scope.users = data.data
+				$scope.users = data.data
 
-		}).error(function(data){
+			}).error(function(data){
 
-			$scope.loading = { name : 'SIGN UP', status : false};
-			$ionicPopup.alert({
-			     title: 'Warning',
-			     template: 'Please check your internet connection'
-			   });
+				$scope.loading = { name : 'SIGN UP', status : false};
+				$ionicPopup.alert({
+				     title: 'Warning',
+				     template: 'Please check your internet connection'
+				   });
 
-		});
+			});			
+		}
+
 
 	}
 
@@ -316,7 +437,12 @@ utanger
 					     template: data.message
 					   });
 					
-					if(data.status) $timeout(function(){ $state.go('member.tabs.follower') },500);
+					if(data.status){
+
+						User.setFriendDataSingle(data.data);
+						$timeout(function(){ $state.go('member.tabs.follower') },500);
+
+					} 
 
 				}).error(function(){
 
@@ -334,4 +460,21 @@ utanger
 	}
 
 })
-.controller('ChatCtrl', function(){});
+.controller('ChatCtrl', function($scope,Auth,$state,User,$timeout,$stateParams,$ionicPopup){
+
+	$scope.convs = [];
+
+	User.getConversations(Auth.getUser().user.user_id).success(function(data){
+
+		$scope.convs= data.aaData;
+
+	}).error(function(data){
+
+		$ionicPopup.alert({
+		     title: 'Warning',
+		     template: 'Please check your internet connection'
+		   });
+
+	});
+
+});

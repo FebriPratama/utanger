@@ -12,13 +12,15 @@
 	</div>
 	<ion-content>
 		<div class="fr_chat">
-			
-			<div class="chat_fr_u">
+			<div style="text-align:center">
+				<small ng-if="!convs.length">No Conversations Found</small>
+			</div>
+			<div class="chat_fr_u" ng-repeat="data in convs">
 				<div class="imf_g">
 					<a ui-sref="member.chat">
-						<img src="../img/ema.png" alt="" class="img_y">
-						<h3 class="nameo">Ema Watson <span class="dtr">2:03 PM</span></h3>
-						<p class="cone">Use this CSS3 box shadow.... <span class="msg_count">2</span></p>
+						<img ng-src="{{ data.to.user_img_profile }}" alt="{{ data.to.user_fullname }}" class="img_y">
+						<h3 class="nameo">{{ data.to.user_fullname }} <span class="dtr">2:03 PM</span></h3>
+						<p class="cone">{{ data.last_message }}<span class="msg_count" ng-if="data.unread.length">{{ data.unread }}</span></p>
 					</a>
 					<div class="clear"></div>
 				</div>
@@ -27,7 +29,7 @@
 		</div>
 	</ion-content>
 </ion-pane>
-<script id = "new_msg.html" type = "text/ng-template">
+<script id ="new_msg.html" type ="text/ng-template">
 	<ion-modal-view>
 		<ion-header-bar>
 			<h1 class = "title">Modal Title</h1>
