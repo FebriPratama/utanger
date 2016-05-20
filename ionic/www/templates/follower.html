@@ -26,11 +26,9 @@
 
 		</div>
 		<div class="friend_lst">
-
 			<div style="text-align:center">
 				<i ng-if="!users.length">No Users Found</i>
 			</div>
-			
 			<div class="frdlist">
 				<div class="row">
 					<div class="fir_content" ui-sref="member.profile({ id : data.user_id })" ng-repeat="data in users">
@@ -46,37 +44,30 @@
 				<hr>
 			</div>
 			<div class="row">
-
 			  <div class="col col-33 col-offset-33" style="text-align:center">Friend List</div>
-
 			</div>
+			<div class="clear"></div>
 			<div class="frdlist">
 				<div style="text-align:center">
 					<small ng-if="!friends.length">No Friends Found</small>
 				</div>
 				<div class="row">
-
 					<div ng-repeat="data in friends">
 						<div class="fir_content col" ng-if="data.one.email !== user.email" ui-sref="member.profile({ id : data.one.user_id })">
 							<a>
 								<img ng-src="{{ data.one.user_img_profile }}" style="width:50px;height:50px;" alt="{{ data.one.user_fullname }}" class="fgtr">
-								
+								<i class="nbgf">{{ data.one.user_fullname }}</i>
 							</a>
-							<i class="nbgf">{{ data.one.user_fullname }}</i>
 						</div>
 						<div class="fir_content col" ng-if="data.two.email !== user.email" ui-sref="member.profile({ id : data.two.user_id })">
 							<a>
 								<img ng-src="{{ data.two.user_img_profile }}" style="width:50px;height:50px;" alt="{{ data.two.user_fullname }}" class="fgtr">
-								
+								<i class="nbgf">{{ data.two.user_fullname }}</i>
 							</a>
-							<i class="nbgf">{{ data.two.user_fullname }}</i>
 						</div>
-
 					</div>
-
 				</div>
 			</div>
-
 			<div class="clear"></div>
 		</div>
 	</ion-content>
