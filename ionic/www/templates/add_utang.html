@@ -1,4 +1,4 @@
-<ion-pane class="add_utg_bg" ng-controller="AddUtangCtrl">
+<ion-pane class="add_utg_bg">
 
 	<div class="isi_utr">
 		<div class="bar bar-header ads_utg">
@@ -8,21 +8,26 @@
 		</div>
 		<div class="add_utang_isi">
 
-			<form name="createUtang" submit="submitCreateUtang(createUtang.$valid,createUtang)" novalidate>
+			<form name="createUtang" ng-submit="submitCreateUtang(createUtang.$valid,createUtang)" novalidate>
 				<ion-list can-swipe="true">
+					<ion-item ng-if="!friends.length">
+						No Friends Yet
+					</ion-item>
 				  <ion-item ng-repeat="data in friends | filter:query">
-					<ion-radio ng-model="friend" ng-if="data.one.email !== user.email" ng-value="data.one.user_id">{{ data.one.user_fullname }}</ion-radio>
-					<ion-radio ng-model="friend" ng-if="data.two.email !== user.email" ng-value="data.two.user_id">{{ data.two.user_fullname }}</ion-radio>
+					<ion-radio ng-model="createUtang.to" ng-if="data.one.email !== user.email" ng-required="data.one.email !== user.email" ng-value="data.one.user_id">{{ data.one.user_fullname }}</ion-radio>
+					<ion-radio ng-model="createUtang.to" ng-if="data.two.email !== user.email" ng-required="data.one.email !== user.email" ng-value="data.two.user_id">{{ data.two.user_fullname }}</ion-radio>
 				  </ion-item>
 				</ion-list>
-
 				<div class="form_add_utg">
 					<div class="for_if">
 						<div class="jml_utg_">
-							<input type="number" placeholder="jumlah utang" class="inpt_utgs">
+							<input type="number" ng-model="createUtang.total" placeholder="jumlah utang" class="inpt_utgs" required>
 						</div>
 						<div class="tgl_payment">
-							<input type="date" placeholder="payment date" class="payment_date">
+							<input type="date" ng-model="createUtang.expired"  placeholder="payment date" class="payment_date" required>
+						</div>
+						<div class="jml_utg_">
+							<textarea class="inpt_utgs" ng-model="createUtang.note"  placeholder="Utang Note"></textarea>
 						</div>
 						<div class="btn_add">
 							<button type="submit" class="bts_u">

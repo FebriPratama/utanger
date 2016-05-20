@@ -205,7 +205,7 @@ utanger.factory('Auth', function($q, $localStorage,$http,ApiEndpoint) {
         },
         saveUtang : function(from,to,data) {
 
-              return $http.post(ApiEndpoint.pub+'/utang/'+from+'/store/'+to,data);
+              return $http.post(ApiEndpoint.api+'/utang/'+from+'/store/'+to,data);
         
         }
       }

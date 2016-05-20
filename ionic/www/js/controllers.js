@@ -1,11 +1,12 @@
 utanger
-.controller('AppCtrl', function($scope, $ionicSideMenuDelegate, $ionicModal){
+.controller('AppCtrl', function($ionicSideMenuDelegate, $ionicModal,$scope,$state,User,$ionicPopup,Auth,Utang){
 	// slide menu function
 	$scope.toggleLeft = function() {
 		$ionicSideMenuDelegate.toggleLeft();
 	};
 
 	//modal add utang
+	// modal 1
 	$ionicModal.fromTemplateUrl('templates/add_utang.html', {
 		scope: $scope,
 		animation: 'slide-in-up'
@@ -36,7 +37,55 @@ utanger
       // Execute action
   });
    /*
+=======
+      id: '1', // We need to use and ID to identify the modal that is firing the event!
+      scope: $scope,
+      backdropClickToClose: false,
+      animation: 'slide-in-up'
+    }).then(function(modal) {
+      $scope.oModal1 = modal;
+    });
+    // modal 2
+     // Modal 2
+    $ionicModal.fromTemplateUrl('templates/new_msg.html', {
+      id: '3', // We need to use and ID to identify the modal that is firing the event!
+      scope: $scope,
+      // backdropClickToClose: false,
+      animation: 'slide-in-up'
+    }).then(function(modal) {
+      $scope.oModal2 = modal;
+    });
+    $scope.openModal = function(index) {
+      if (index == 1) $scope.oModal1.show();
+      else $scope.oModal2.show();
+    };
+
+    $scope.closeModal = function(index) {
+      if (index == 1) $scope.oModal1.hide();
+      else $scope.oModal2.hide();
+    };
+
+    /* Listen for broadcasted messages */
+
+    $scope.$on('modal.shown', function(event, modal) {
+      console.log('Modal ' + modal.id + ' is shown!');
+    });
+
+    $scope.$on('modal.hidden', function(event, modal) {
+      console.log('Modal ' + modal.id + ' is hidden!');
+    });
+
+    // Cleanup the modals when we're done with them (i.e: state change)
+    // Angular will broadcast a $destroy event just before tearing down a scope 
+    // and removing the scope from its parent.
+    $scope.$on('$destroy', function() {
+      console.log('Destroying modals...');
+      $scope.oModal1.remove();
+      $scope.oModal2.remove();
+    });
+
     // map 
+  /*
    function initialize() {
    	var myLatlng = new google.maps.LatLng(-7.79009,110.3618989);
 
@@ -92,6 +141,85 @@ utanger
     	alert('Example of infowindow with ng-click')
     };
    // end
+	$scope.loading = { name : 'Log In', status : false};
+	$scope.friends = [];
+	$scope.utangs = [];
+	$scope.user = Auth.getUser().user;
+	
+	/* monitors total item */
+	$scope.$watch(function(){ return User.getFriendData();},function(val){
+
+		$scope.friends = val;
+		
+	});
+
+	$scope.submitCreateUtang = function(valid,data){
+
+		if(valid){
+
+			Utang.saveUtang($scope.user.user_id,data.to,data).success(function(data){
+				
+				if(data.status){
+					
+					Utang.setDataSingle(data.data);
+					$scope.modal.hide();
+
+				}
+
+				$ionicPopup.alert({
+				     title: data.status ? 'Success' : 'Warning',
+				     template: data.message
+				   });
+
+			}).error(function(data){
+
+				$scope.loading = { name : 'Log In', status : false};
+				$ionicPopup.alert({
+				     title: 'Warning',
+				     template: 'Please check your internet connection'
+				   });
+
+			});
+
+		}
+
+	}
+
+	/* monitors total item */
+	$scope.$watch(function(){ return Utang.getData();},function(val){
+
+		$scope.utangs = val;
+		
+	});
+
+})
+.controller('AddUtangCtrl', function($scope,$state,User,$ionicPopup,Auth,Utang){
+
+	$scope.loading = { name : 'Log In', status : false};
+	$scope.friends = [];
+	$scope.user = Auth.getUser().user;
+	
+	/* monitors total item */
+	$scope.$watch(function(){ return User.getFriendData();},function(val){
+
+		$scope.friends = val;
+		
+	});
+
+	$scope.submitCreateUtang = function(valid,data){
+
+		if(valid){
+
+			Utang.saveUtang($scope.user.user_id,data.to,data).success(function(data){
+				
+			}).error(function(data){
+
+			});
+
+		}
+
+	}
+
 })
 .controller('HomeCtrl', function(){})
 .controller('LoginCtrl', function($scope,$state,User,$ionicPopup,Auth){
@@ -115,26 +243,7 @@ utanger
 
 				Auth.setUser(data.data);
 				Auth.setToken(data.token);
-
-				// get friend list
-				User.getFriend(data.data.user.user_id).success(function(data){
-
-					if(data.status){
-						
-						User.setFriendData(data.data);
-
-						$state.go('member.tabs.utang');
-					
-					}
-
-				}).error(function(){
-
-					$ionicPopup.alert({
-					     title: 'Warning',
-					     template: 'Please check your internet connection'
-					   });
-
-				});				
+				$state.go('member.tabs.utang');			
 
 			}			
 
@@ -148,28 +257,6 @@ utanger
 
 
 		});
-
-	}
-
-})
-.controller('AddUtangCtrl', function($scope,$state,User,$ionicPopup,Auth){
-
-	$scope.loading = { name : 'Log In', status : false};
-	$scope.friends = [];
-	$scope.user = Auth.getUser().user;
-	
-	/* monitors total item */
-	$scope.$watch(function(){ return User.getFriendData();},function(val){
-
-		$scope.friends = val;
-		
-	});
-
-	$scope.submitCreateUtang = function(valid,data){
-
-		if(valid){
-
-		}
 
 	}
 
@@ -240,9 +327,14 @@ utanger
 	}
 
 })
-.controller('NavCtrl', function($scope,$state,User,Auth){
+.controller('NavCtrl', function($scope,$state,User,Auth,Utang){
 	
 	$scope.user = Auth.getUser().user;
+
+	if(Auth.getUser().user){
+		User.setFriendData(Auth.getUser().user.user_friends);
+		Utang.setData(Auth.getUser().user.user_utangs);
+	}	
 
 	$scope.logout = function(){
 
@@ -251,7 +343,18 @@ utanger
 			
 	}
 
+	/* monitors total item */
+	$scope.$watch(function(){ return Auth.getUserData();},function(val){
 
+		if(val.user){
+			
+			User.setFriendData(val.user.user_friends);
+			Utang.setData(val.user.user_utangs);
+
+		}		
+		
+	});
+	
 })
 .controller('FriendCtrl', function($scope,$state,User,Auth,$ionicPopup){
 
@@ -334,7 +437,12 @@ utanger
 					     template: data.message
 					   });
 					
-					if(data.status) $timeout(function(){ $state.go('member.tabs.follower') },500);
+					if(data.status){
+
+						User.setFriendDataSingle(data.data);
+						$timeout(function(){ $state.go('member.tabs.follower') },500);
+
+					} 
 
 				}).error(function(){
 

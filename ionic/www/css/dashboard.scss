@@ -464,6 +464,8 @@
 						.for_if {
 							background-color: #fff;
 							padding: 5px 0px;
+							border-bottom-left-radius:3px;
+							border-bottom-right-radius:3px;
 							.jml_utg_, .tgl_payment {
 								padding: 5px 20px;
 								.inpt_utgs, .payment_date {
@@ -527,6 +529,41 @@
 									font-family: "proxima_nova_rgbold";
 								}
 							}
+							.bowe {
+								min-height: 200px;
+								border-bottom:1px solid #fafafa;
+								.fhg {
+									padding-left: 10px;
+									margin-bottom: 15px;
+									padding-right:20px;
+									.kjht {
+										text-decoration: none;
+										.ojgf {
+											float: left;
+											border-radius:100%;
+											margin-right: 10px;
+										}
+										.nsu {
+											color: #333;
+											font-family: "proxima_nova_rgregular";
+											font-size: 14px;
+											padding-top: 15px;
+											.kje {
+											// position:absolute;
+											width: 8px;
+											height: 8px;
+											border-radius: 100%;
+											float: right;
+											background-color:#9CCC65;
+										}
+									}
+								}
+							}
+							.ngdfr {
+								padding: 10px 0px !important;
+							}
+						}
+
 						}
 					}
 				}
