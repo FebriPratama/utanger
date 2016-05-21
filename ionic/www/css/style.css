@@ -1,6 +1,7 @@
 @import url(login.css);
 @import url(register.css);
 @import url(dashboard.css);
+@import url(page_detail.css);
 @media (max-width: 320px) {
   .clear {
     clear: both; }

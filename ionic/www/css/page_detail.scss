@@ -1,0 +1,82 @@
+.idgak {
+	padding-top: 70px;
+	.khtk {
+		padding:0px 20px;
+		a {
+			text-decoration: none;
+			.kjhf {
+				width: 90px;
+				border-radius: 100%;
+				float: left;
+				margin-right: 10px;
+			}
+			.njht {
+				font-size: 20px;
+				font-family: "FuturaPT-Medium";
+				color: #333;
+				margin: 0px;
+				padding-top: 20px;
+			}
+			.bdfrt {
+				color: #C3C3C3;
+				font-family: "FuturaPT-Light";
+				font-size: 15px;
+			}
+		}
+	}
+	.brew {
+		padding:20px;
+		.greget {
+			margin-bottom: 20px;
+			p {
+				margin: 0px;
+				padding-bottom: 5px;
+			}
+			p.kjfh {
+				font-family: "FuturaPT-Medium";
+				font-size: 18px;
+				color: #333;
+			}
+			p.gdf {
+				line-height: 21px;
+				font-family: "proxima_nova_rgregular";
+				font-size: 14px;
+				color: #848484;
+				text-align: justify;
+			}
+			span.bwf {
+				color: #848484;
+				font-family: "proxima_nova_rgregular";
+				font-size: 14px;
+				margin-left: 25px;
+			}
+			.hgy {
+				font-family: "IonIcons";
+				font-size:20px;
+				color: #333;
+				margin-right: 10px;
+			}
+			p.payback {
+				&:before {
+					@extend .hgy;
+					content: "\f2fd";
+				}
+			}
+			p.utr {
+				&:before {
+					@extend .hgy;
+					content: "\f110";
+				}
+			}
+			p.sts {
+				&:before {
+					@extend .hgy;
+					content: "\f2e9";
+				}
+			}
+			.bgk {
+				padding-left: 25px !important;
+			}
+		}
+	}
+}
