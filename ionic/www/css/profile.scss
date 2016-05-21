@@ -131,6 +131,136 @@
 			}
 		}
 	}
+
+	/*setting*/
+	.edit_hgf {
+		.hove {
+			position: absolute;
+			width: 110px;
+			height: 110px;
+			background-color: rgba(0,0,0, 0.2);
+			left: 105px;
+			border: none;
+			border-radius: 100%;
+			span {
+				font-size: 65px;
+				color: rgba(255,255,255,.5);
+			}
+		}
+	}
+
+	.sgth {
+		margin-top: 0px !important;
+		.edt_name {
+			margin: 0px auto;
+			.nme_edt {
+				width: 300px;
+				text-align: center;
+				padding-left: 20px;
+				padding-right: 20px;
+				background-color: transparent;
+				color: #fff;
+				font-size: 16px;
+				font-family: "proxima_nova_rgregular";
+			}
+			.btn_nme {
+				position: absolute;
+				right: 20px;
+				margin-top: -28px;
+				background-color: transparent;
+				border: none;
+				outline: none;
+				.ion-android-send {
+					color: #fff;
+				}
+			}
+		}
+		.edt_add {
+			margin: 0px auto;
+			.addr_edt {
+				width: 300px;
+				text-align: center;
+				padding-left: 20px;
+				padding-right: 20px;
+				background-color: transparent;
+				color: #fff;
+				font-size: 14px;
+				font-family: "proxima_nova_rgregular";
+			}
+			.btn_nme {
+				position: absolute;
+				right: 20px;
+				margin-top: -28px;
+				background-color: transparent;
+				border: none;
+				outline: none;
+				.ion-android-send {
+					color: #fff;
+				}
+			}
+		}
+	}
+
+	.em_ad_iy {
+		margin-top: 20px;
+		.fhgrt {
+			padding: 20px 20px;
+			.cfe {
+				.item {
+					border:none;
+					padding: 10px 20px;
+					.njhrew {
+						padding-left: 30px;
+						font-family: "proxima_nova_rgregular";
+						font-size: 14px;
+						color: #848484;
+					}
+				}
+				.ncb {
+					border-top-left-radius: 3px;
+					border-top-right-radius: 3px;
+					&:before {
+						content:"\f422";
+						font-family: "IonIcons";
+						font-size: 28px;
+						color: #848484;
+					}
+				}
+				.kjt {
+					border-bottom-left-radius: 3px;
+					border-bottom-right-radius: 3px;
+					&:before {
+						content:"\f41b";
+						font-family: "IonIcons";
+						font-size: 28px;
+						color: #848484;
+					}
+				}
+				.nbd {
+					&:before {
+						content:"\f4b8";
+						font-family: "IonIcons";
+						font-size: 28px;
+						color: #848484;
+					}
+				}
+			}
+		}
+		.nbgfsd {
+			text-align: center;
+			.btn-done {
+				background-color: #FFC107;
+				padding: 10px 40px;
+				border-radius: 3px;
+				color: #fff;
+				font-family: "Roboto";
+				border:none;
+				font-weight: 600;
+				font-size: 14px;
+			}
+		}
+	}
+	/*end*/
 }
 @media(max-width: 360px){
 

@@ -97,6 +97,109 @@
     background-color: rgba(255, 255, 255, 0.5);
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07); }
     .map_u #map .gm-style-mtc {
-      display: none; } }
+      display: none; }
+
+  /*setting*/
+  .edit_hgf .hove {
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    background-color: rgba(0, 0, 0, 0.2);
+    left: 105px;
+    border: none;
+    border-radius: 100%; }
+    .edit_hgf .hove span {
+      font-size: 65px;
+      color: rgba(255, 255, 255, 0.5); }
+
+  .sgth {
+    margin-top: 0px !important; }
+    .sgth .edt_name {
+      margin: 0px auto; }
+      .sgth .edt_name .nme_edt {
+        width: 300px;
+        text-align: center;
+        padding-left: 20px;
+        padding-right: 20px;
+        background-color: transparent;
+        color: #fff;
+        font-size: 16px;
+        font-family: "proxima_nova_rgregular"; }
+      .sgth .edt_name .btn_nme {
+        position: absolute;
+        right: 20px;
+        margin-top: -28px;
+        background-color: transparent;
+        border: none;
+        outline: none; }
+        .sgth .edt_name .btn_nme .ion-android-send {
+          color: #fff; }
+    .sgth .edt_add {
+      margin: 0px auto; }
+      .sgth .edt_add .addr_edt {
+        width: 300px;
+        text-align: center;
+        padding-left: 20px;
+        padding-right: 20px;
+        background-color: transparent;
+        color: #fff;
+        font-size: 14px;
+        font-family: "proxima_nova_rgregular"; }
+      .sgth .edt_add .btn_nme {
+        position: absolute;
+        right: 20px;
+        margin-top: -28px;
+        background-color: transparent;
+        border: none;
+        outline: none; }
+        .sgth .edt_add .btn_nme .ion-android-send {
+          color: #fff; }
+
+  .em_ad_iy {
+    margin-top: 20px; }
+    .em_ad_iy .fhgrt {
+      padding: 20px 20px; }
+      .em_ad_iy .fhgrt .cfe .item {
+        border: none;
+        padding: 10px 20px; }
+        .em_ad_iy .fhgrt .cfe .item .njhrew {
+          padding-left: 30px;
+          font-family: "proxima_nova_rgregular";
+          font-size: 14px;
+          color: #848484; }
+      .em_ad_iy .fhgrt .cfe .ncb {
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px; }
+        .em_ad_iy .fhgrt .cfe .ncb:before {
+          content: "\f422";
+          font-family: "IonIcons";
+          font-size: 28px;
+          color: #848484; }
+      .em_ad_iy .fhgrt .cfe .kjt {
+        border-bottom-left-radius: 3px;
+        border-bottom-right-radius: 3px; }
+        .em_ad_iy .fhgrt .cfe .kjt:before {
+          content: "\f41b";
+          font-family: "IonIcons";
+          font-size: 28px;
+          color: #848484; }
+      .em_ad_iy .fhgrt .cfe .nbd:before {
+        content: "\f4b8";
+        font-family: "IonIcons";
+        font-size: 28px;
+        color: #848484; }
+    .em_ad_iy .nbgfsd {
+      text-align: center; }
+      .em_ad_iy .nbgfsd .btn-done {
+        background-color: #FFC107;
+        padding: 10px 40px;
+        border-radius: 3px;
+        color: #fff;
+        font-family: "Roboto";
+        border: none;
+        font-weight: 600;
+        font-size: 14px; }
+
+  /*end*/ }
 
 /*# sourceMappingURL=profile.css.map */
