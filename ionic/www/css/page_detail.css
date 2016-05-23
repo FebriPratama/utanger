@@ -115,5 +115,62 @@
           content: "\f2e9"; }
         .idgak .brew .greget .bgk {
           padding-left: 25px !important; } }
+@media (max-width: 768px) {
+  .idgak {
+    padding-top: 70px; }
+    .idgak .khtk {
+      padding: 0px 20px; }
+      .idgak .khtk a {
+        text-decoration: none; }
+        .idgak .khtk a .kjhf {
+          width: 90px;
+          border-radius: 100%;
+          float: left;
+          margin-right: 10px; }
+        .idgak .khtk a .njht {
+          font-size: 20px;
+          font-family: "FuturaPT-Medium";
+          color: #333;
+          margin: 0px;
+          padding-top: 20px; }
+        .idgak .khtk a .bdfrt {
+          color: #C3C3C3;
+          font-family: "FuturaPT-Light";
+          font-size: 15px; }
+    .idgak .brew {
+      padding: 20px; }
+      .idgak .brew .greget {
+        margin-bottom: 20px; }
+        .idgak .brew .greget p {
+          margin: 0px;
+          padding-bottom: 5px; }
+        .idgak .brew .greget p.kjfh {
+          font-family: "FuturaPT-Medium";
+          font-size: 18px;
+          color: #333; }
+        .idgak .brew .greget p.gdf {
+          line-height: 21px;
+          font-family: "proxima_nova_rgregular";
+          font-size: 14px;
+          color: #848484;
+          text-align: justify; }
+        .idgak .brew .greget span.bwf {
+          color: #848484;
+          font-family: "proxima_nova_rgregular";
+          font-size: 14px;
+          margin-left: 25px; }
+        .idgak .brew .greget .hgysc, .idgak .brew .greget p.payback:before, .idgak .brew .greget p.utr:before, .idgak .brew .greget p.sts:before {
+          font-family: "IonIcons";
+          font-size: 20px;
+          color: #333;
+          margin-right: 10px; }
+        .idgak .brew .greget p.payback:before {
+          content: "\f2fd"; }
+        .idgak .brew .greget p.utr:before {
+          content: "\f110"; }
+        .idgak .brew .greget p.sts:before {
+          content: "\f2e9"; }
+        .idgak .brew .greget .bgk {
+          padding-left: 25px !important; } }
 
 /*# sourceMappingURL=page_detail.css.map */

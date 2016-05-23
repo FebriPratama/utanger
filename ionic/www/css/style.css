@@ -617,6 +617,312 @@
         border-top: 1px solid;
         border-bottom: 1px solid;
         border-color: rgba(255, 255, 255, 0.1); } }
+@media (max-width: 768px) {
+  .chat_pane {
+    background-color: #fbfbfb; }
+    .chat_pane .header_chat {
+      background-color: #4d8bdd;
+      background-image: none;
+      max-height: 50px;
+      height: 50px;
+      box-shadow: 0 3px 5px rgba(0, 0, 0, 0.18); }
+      .chat_pane .header_chat .btn-h .fa-bars {
+        font-size: 18px !important;
+        color: #fff; }
+      .chat_pane .header_chat .btn-h .profile_ct {
+        border-radius: 100%;
+        margin-top: 5px;
+        padding-right: 2px; }
+      .chat_pane .header_chat .pro_name {
+        font-size: 13px !important;
+        /* font-family: "Roboto"; */
+        color: #fff !important;
+        margin: 0px;
+        letter-spacing: .5px;
+        font-weight: 500;
+        margin-top: 3px;
+        font-family: "proxima_nova_rgregular"; }
+    .chat_pane .msg-chat {
+      width: 320px;
+      height: 511px;
+      display: table; }
+      .chat_pane .msg-chat .message-ch {
+        position: absolute;
+        bottom: 10px;
+        list-style: none;
+        padding: 0px; }
+        .chat_pane .msg-chat .message-ch .ct-box {
+          overflow: hidden;
+          vertical-align: bottom;
+          padding: 0px 10px; }
+          .chat_pane .msg-chat .message-ch .ct-box .messages {
+            border-radius: 4px;
+            width: 77%;
+            padding: 10px; }
+            .chat_pane .msg-chat .message-ch .ct-box .messages p {
+              font-family: "proxima_novalight";
+              font-size: 14px;
+              margin-bottom: 0px; }
+              .chat_pane .msg-chat .message-ch .ct-box .messages p a {
+                color: #4d8bdd;
+                text-decoration: none; }
+          .chat_pane .msg-chat .message-ch .ct-box .avatar img {
+            border-radius: 100%; }
+        .chat_pane .msg-chat .message-ch .self {
+          padding-right: 10px; }
+          .chat_pane .msg-chat .message-ch .self .messages {
+            background-color: #fff;
+            padding-left: 15px;
+            margin-right: 20px;
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06); }
+            .chat_pane .msg-chat .message-ch .self .messages:before {
+              content: "";
+              position: absolute;
+              width: 0;
+              height: 0;
+              border-top: 10px solid transparent;
+              border-bottom: 10px solid transparent;
+              border-left: 10px solid white;
+              right: 70px;
+              margin-top: 0px; }
+            .chat_pane .msg-chat .message-ch .self .messages p {
+              color: #a3a3a3; }
+          .chat_pane .msg-chat .message-ch .self .avatar {
+            float: right; }
+          .chat_pane .msg-chat .message-ch .self .timed {
+            padding-left: 5px; }
+            .chat_pane .msg-chat .message-ch .self .timed p {
+              font-size: 12px;
+              color: #CACACA;
+              margin-top: 5px;
+              font-family: "proxima_novalight"; }
+              .chat_pane .msg-chat .message-ch .self .timed p .ion-checkmark {
+                margin-left: 5px; }
+              .chat_pane .msg-chat .message-ch .self .timed p .read {
+                color: #a7cdff !important; }
+              .chat_pane .msg-chat .message-ch .self .timed p .unread {
+                color: #CACACA; }
+        .chat_pane .msg-chat .message-ch .other .messages {
+          background-color: #4d8bdd;
+          margin-left: 23%;
+          box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06); }
+          .chat_pane .msg-chat .message-ch .other .messages:before {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-top: 10px solid transparent;
+            border-bottom: 10px solid transparent;
+            border-right: 10px solid #4d8bdd;
+            left: 70px;
+            margin-top: 0px; }
+          .chat_pane .msg-chat .message-ch .other .messages p {
+            color: #fff;
+            margin-bottom: 0px; }
+        .chat_pane .msg-chat .message-ch .other .avatar {
+          float: left; }
+        .chat_pane .msg-chat .message-ch .other .timed {
+          text-align: right; }
+          .chat_pane .msg-chat .message-ch .other .timed p {
+            font-size: 12px;
+            color: #CACACA;
+            margin-top: 5px;
+            font-family: "proxima_novalight"; }
+            .chat_pane .msg-chat .message-ch .other .timed p .ion-checkmark {
+              margin-left: 5px; }
+            .chat_pane .msg-chat .message-ch .other .timed p .read {
+              color: #a7cdff !important; }
+            .chat_pane .msg-chat .message-ch .other .timed p .unread {
+              color: #CACACA; }
+    .chat_pane .form_input {
+      position: absolute;
+      bottom: 0;
+      text-align: center; }
+      .chat_pane .form_input ._iu {
+        min-width: 320px;
+        width: 320px;
+        max-width: 100%; }
+        .chat_pane .form_input ._iu .joi {
+          border: none !important;
+          -webkit-box-shadow: 0px -2px 6px 0px rgba(183, 183, 183, 0.2);
+          -moz-box-shadow: 0px -2px 6px 0px rgba(183, 183, 183, 0.2);
+          box-shadow: 0px -2px 6px 0px rgba(183, 183, 183, 0.2); }
+          .chat_pane .form_input ._iu .joi:before {
+            content: "\f11c";
+            font-family: "Ionicons";
+            position: absolute;
+            color: #D0D0D0;
+            font-size: 22px;
+            margin-top: 7px; }
+          .chat_pane .form_input ._iu .joi .form-ch {
+            width: 305px;
+            border: none;
+            font-family: "proxima_novalight";
+            color: #888;
+            font-size: 15px;
+            padding-left: 30px;
+            background-image: none;
+            height: 40px !important;
+            width: 75%; }
+          .chat_pane .form_input ._iu .joi ::-webkit-input-placeholder {
+            /* Chrome/Opera/Safari */
+            font-family: "proxima_novalight";
+            color: #D0D0D0; }
+          .chat_pane .form_input ._iu .joi .btn_submit {
+            background-color: #4d8bdd;
+            border-radius: 10%;
+            background-image: none;
+            border: none;
+            padding: 10px 20px;
+            margin-right: 10px;
+            color: #fff;
+            font-size: 14px;
+            box-shadow: 1px 1.732px 5px 0px rgba(170, 170, 170, 0.8); }
+
+  /*side menu*/
+  .side_bg_mnu {
+    background-color: #2A343B;
+    padding: 0px 0px; }
+    .side_bg_mnu .user_pro {
+      background-color: #232C32;
+      background-image: none;
+      max-height: 50px;
+      height: 50px;
+      padding-top: 10px;
+      padding-left: 30px; }
+      .side_bg_mnu .user_pro:before {
+        content: "\f4a4";
+        font-family: "Ionicons";
+        color: #565D63;
+        position: absolute;
+        font-size: 20px;
+        margin-left: 10px;
+        margin-top: 5px; }
+      .side_bg_mnu .user_pro .sch_here {
+        background-color: transparent;
+        width: 220px;
+        height: 30px;
+        border-radius: 50px;
+        padding: 0px 20px;
+        background-color: #2A343B;
+        font-size: 16px;
+        color: #fff;
+        font-family: FuturaPT-Light;
+        line-height: 14px;
+        padding-bottom: 3px;
+        padding-left: 30px;
+        border: 1px solid #21282D; }
+      .side_bg_mnu .user_pro ::-webkit-input-placeholder {
+        /* Chrome/Opera/Safari */
+        color: #565D63;
+        font-style: italic;
+        font-size: 14px; }
+    .side_bg_mnu .profile_ema {
+      text-align: center; }
+      .side_bg_mnu .profile_ema img {
+        width: 80px;
+        margin-top: 30%;
+        border-radius: 100%; }
+      .side_bg_mnu .profile_ema .ema_name {
+        padding-top: 10px; }
+        .side_bg_mnu .profile_ema .ema_name h2 {
+          font-size: 18px;
+          color: #F0F8FD;
+          font-family: "proxima_novasemibold";
+          padding-bottom: 1px;
+          margin: 0px; }
+        .side_bg_mnu .profile_ema .ema_name .location {
+          color: #F0F8FD;
+          font-family: "proxima_nova_rgregular";
+          font-size: 13px; }
+          .side_bg_mnu .profile_ema .ema_name .location:before {
+            content: "\f456";
+            font-family: "Ionicons";
+            position: relative;
+            margin-right: 5px;
+            color: #F0F8FD; }
+    .side_bg_mnu .info_fol {
+      text-align: center;
+      padding-top: 30px; }
+      .side_bg_mnu .info_fol .xcd {
+        float: left;
+        width: 33%; }
+        .side_bg_mnu .info_fol .xcd .jml {
+          font-size: 15px;
+          font-family: "FuturaPT-Demibold";
+          color: #fff; }
+        .side_bg_mnu .info_fol .xcd p {
+          font-size: 14px;
+          font-family: "proxima_nova_rgregular";
+          color: #fff; }
+      .side_bg_mnu .info_fol .fol:before {
+        content: "\f47e";
+        font-family: "Ionicons";
+        color: #fff;
+        position: absolute;
+        font-size: 30px;
+        margin-top: -22px;
+        margin-left: 7px; }
+      .side_bg_mnu .info_fol .utg:before {
+        content: "\f3ce";
+        font-family: "Ionicons";
+        color: #fff;
+        position: absolute;
+        font-size: 28px;
+        margin-top: -22px;
+        margin-left: -9px; }
+      .side_bg_mnu .info_fol .foling:before {
+        content: "\f480";
+        font-family: "Ionicons";
+        color: #fff;
+        position: absolute;
+        font-size: 30px;
+        margin-top: -22px;
+        margin-left: 7px; }
+    .side_bg_mnu .info_gdf .log_is {
+      padding-top: 30px; }
+      .side_bg_mnu .info_gdf .log_is .icon_inv, .side_bg_mnu .info_gdf .log_is .home:before, .side_bg_mnu .info_gdf .log_is .notif:before, .side_bg_mnu .info_gdf .log_is .message:before, .side_bg_mnu .info_gdf .log_is .sett:before, .side_bg_mnu .info_gdf .log_is .logout:before {
+        font-family: "Ionicons";
+        color: #fff;
+        font-size: 20px;
+        margin-right: 10px; }
+      .side_bg_mnu .info_gdf .log_is li {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        padding-right: 15px;
+        padding-left: 15px; }
+        .side_bg_mnu .info_gdf .log_is li a {
+          color: #fff;
+          font-family: "FuturaPT-Book";
+          font-size: 16px;
+          text-decoration: none; }
+        .side_bg_mnu .info_gdf .log_is li .kh {
+          float: right;
+          padding: 1px 14px;
+          border-radius: 4px;
+          font-size: 12px;
+          /*font-weight: bold;*/
+          font-family: "FuturaPT-Medium";
+          color: #fff;
+          background-color: #e65a5c; }
+        .side_bg_mnu .info_gdf .log_is li .arrow_ {
+          color: #fff;
+          float: right; }
+      .side_bg_mnu .info_gdf .log_is .home:before {
+        content: "\f448"; }
+      .side_bg_mnu .info_gdf .log_is .notif:before {
+        content: "\f39b"; }
+      .side_bg_mnu .info_gdf .log_is .message:before {
+        content: "\f11c"; }
+      .side_bg_mnu .info_gdf .log_is .sett:before {
+        content: "\f2f7"; }
+      .side_bg_mnu .info_gdf .log_is .logout:before {
+        content: "\f2a9"; }
+      .side_bg_mnu .info_gdf .log_is .andact {
+        background-color: rgba(255, 255, 255, 0.08);
+        border-top: 1px solid;
+        border-bottom: 1px solid;
+        border-color: rgba(255, 255, 255, 0.1); } }
 .clear {
   clear: both; }
 
@@ -824,6 +1130,209 @@
 
   /*end*/ }
 @media (max-width: 360px) {
+  .profile_page .cie-cie {
+    box-shadow: none;
+    background-color: transparent !important; }
+    .profile_page .cie-cie .btn-h .gfro {
+      font-size: 20px !important;
+      color: #fff;
+      font-weight: normal;
+      padding-right: 7px; }
+  .profile_page .top_profile {
+    padding-top: 20%; }
+    .profile_page .top_profile .row {
+      text-align: center; }
+      .profile_page .top_profile .row .img_ctr .pr_img {
+        width: 110px;
+        border-radius: 100%; }
+      .profile_page .top_profile .row .img_ctr .ngr {
+        font-family: "proxima_novasemibold";
+        font-size: 18px;
+        color: #fff;
+        margin: 0px;
+        padding: 0; }
+      .profile_page .top_profile .row .img_ctr .ader {
+        font-family: "proxima_novalight";
+        font-size: 13px;
+        color: #A1C5F3;
+        margin: 0px; }
+        .profile_page .top_profile .row .img_ctr .ader:before {
+          content: "\f3a3";
+          font-family: "IonIcons";
+          color: #A1C5F3;
+          font-style: 14px;
+          margin-right: 5px; }
+      .profile_page .top_profile .row .msg_and {
+        float: left;
+        text-align: right;
+        padding-right: 20px;
+        padding-top: 50px; }
+        .profile_page .top_profile .row .msg_and .btn_mess {
+          background-color: #ff8d4a;
+          border: 2px solid #ff7524;
+          padding: 6px 11px;
+          border-radius: 100%; }
+          .profile_page .top_profile .row .msg_and .btn_mess .ion-chatbubbles {
+            color: #FFECE2;
+            font-size: 18px; }
+      .profile_page .top_profile .row .foll_and {
+        float: left;
+        text-align: left;
+        padding-left: 20px;
+        padding-top: 50px; }
+        .profile_page .top_profile .row .foll_and .btn_foll {
+          background-color: #ffd84a;
+          border: 2px solid #ffd024;
+          padding: 6px 10.5px;
+          border-radius: 100%; }
+          .profile_page .top_profile .row .foll_and .btn_foll .ion-android-person-add {
+            color: #FFF7D9;
+            font-size: 18px; }
+  .profile_page .fpl_cnt {
+    padding: 0px 10px;
+    margin-top: 10px; }
+    .profile_page .fpl_cnt .row .fl_count {
+      text-align: right;
+      padding-right: 20px;
+      border-top: 1px solid #72A5E8;
+      padding-top: 20px; }
+      .profile_page .fpl_cnt .row .fl_count span {
+        font-size: 14px;
+        color: #fff;
+        font-family: "proxima_novasemibold"; }
+      .profile_page .fpl_cnt .row .fl_count p {
+        font-size: 18px;
+        color: #A1C5F3;
+        font-family: "FuturaPT-Bold"; }
+    .profile_page .fpl_cnt .row .ing_count {
+      text-align: left;
+      padding-left: 20px;
+      border-left: 1px solid #72A5E8;
+      border-top: 1px solid #72A5E8;
+      padding-top: 20px; }
+      .profile_page .fpl_cnt .row .ing_count span {
+        font-size: 14px;
+        color: #fff;
+        font-family: "proxima_novasemibold"; }
+      .profile_page .fpl_cnt .row .ing_count p {
+        font-size: 18px;
+        color: #A1C5F3;
+        font-family: "FuturaPT-Bold"; }
+
+  .map_u #map {
+    height: 210px;
+    width: 280px;
+    margin: 0 auto;
+    padding: 5px;
+    border-radius: 3px;
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07); }
+    .map_u #map .gm-style-mtc {
+      display: none; }
+
+  /*setting*/
+  .edit_hgf .hove {
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    background-color: rgba(0, 0, 0, 0.2);
+    left: 105px;
+    border: none;
+    border-radius: 100%; }
+    .edit_hgf .hove span {
+      font-size: 65px;
+      color: rgba(255, 255, 255, 0.5); }
+
+  .sgth {
+    margin-top: 0px !important; }
+    .sgth .edt_name {
+      margin: 0px auto; }
+      .sgth .edt_name .nme_edt {
+        width: 300px;
+        text-align: center;
+        padding-left: 20px;
+        padding-right: 20px;
+        background-color: transparent;
+        color: #fff;
+        font-size: 16px;
+        font-family: "proxima_nova_rgregular"; }
+      .sgth .edt_name .btn_nme {
+        position: absolute;
+        right: 20px;
+        margin-top: -28px;
+        background-color: transparent;
+        border: none;
+        outline: none; }
+        .sgth .edt_name .btn_nme .ion-android-send {
+          color: #fff; }
+    .sgth .edt_add {
+      margin: 0px auto; }
+      .sgth .edt_add .addr_edt {
+        width: 300px;
+        text-align: center;
+        padding-left: 20px;
+        padding-right: 20px;
+        background-color: transparent;
+        color: #fff;
+        font-size: 14px;
+        font-family: "proxima_nova_rgregular"; }
+      .sgth .edt_add .btn_nme {
+        position: absolute;
+        right: 20px;
+        margin-top: -28px;
+        background-color: transparent;
+        border: none;
+        outline: none; }
+        .sgth .edt_add .btn_nme .ion-android-send {
+          color: #fff; }
+
+  .em_ad_iy {
+    margin-top: 20px; }
+    .em_ad_iy .fhgrt {
+      padding: 20px 20px; }
+      .em_ad_iy .fhgrt .cfe .item {
+        border: none;
+        padding: 10px 20px; }
+        .em_ad_iy .fhgrt .cfe .item .njhrew {
+          padding-left: 30px;
+          font-family: "proxima_nova_rgregular";
+          font-size: 14px;
+          color: #848484; }
+      .em_ad_iy .fhgrt .cfe .ncb {
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px; }
+        .em_ad_iy .fhgrt .cfe .ncb:before {
+          content: "\f422";
+          font-family: "IonIcons";
+          font-size: 28px;
+          color: #848484; }
+      .em_ad_iy .fhgrt .cfe .kjt {
+        border-bottom-left-radius: 3px;
+        border-bottom-right-radius: 3px; }
+        .em_ad_iy .fhgrt .cfe .kjt:before {
+          content: "\f41b";
+          font-family: "IonIcons";
+          font-size: 28px;
+          color: #848484; }
+      .em_ad_iy .fhgrt .cfe .nbd:before {
+        content: "\f4b8";
+        font-family: "IonIcons";
+        font-size: 28px;
+        color: #848484; }
+    .em_ad_iy .nbgfsd {
+      text-align: center; }
+      .em_ad_iy .nbgfsd .btn-done {
+        background-color: #FFC107;
+        padding: 10px 40px;
+        border-radius: 3px;
+        color: #fff;
+        font-family: "Roboto";
+        border: none;
+        font-weight: 600;
+        font-size: 14px; }
+
+  /*end*/ }
+@media (max-width: 768px) {
   .profile_page .cie-cie {
     box-shadow: none;
     background-color: transparent !important; }
