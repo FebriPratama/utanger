@@ -6,6 +6,9 @@ body {
   .login_bg .logo {
     text-align: center; }
 
+.clear {
+  clear: both; }
+
 @media (max-width: 320px) {
   .icon-font, .dta_ipt .item-email:before, .dta_ipt .item-passwd:before {
     font-family: "FontAwesome";
