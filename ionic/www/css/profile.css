@@ -1,4 +1,210 @@
+.clear {
+  clear: both; }
+
 @media (max-width: 320px) {
+  .profile_page .cie-cie {
+    box-shadow: none;
+    background-color: transparent !important; }
+    .profile_page .cie-cie .btn-h .gfro {
+      font-size: 20px !important;
+      color: #fff;
+      font-weight: normal;
+      padding-right: 7px; }
+  .profile_page .top_profile {
+    padding-top: 20%; }
+    .profile_page .top_profile .row {
+      text-align: center; }
+      .profile_page .top_profile .row .img_ctr .pr_img {
+        width: 110px;
+        border-radius: 100%; }
+      .profile_page .top_profile .row .img_ctr .ngr {
+        font-family: "proxima_novasemibold";
+        font-size: 18px;
+        color: #fff;
+        margin: 0px;
+        padding: 0; }
+      .profile_page .top_profile .row .img_ctr .ader {
+        font-family: "proxima_novalight";
+        font-size: 13px;
+        color: #A1C5F3;
+        margin: 0px; }
+        .profile_page .top_profile .row .img_ctr .ader:before {
+          content: "\f3a3";
+          font-family: "IonIcons";
+          color: #A1C5F3;
+          font-style: 14px;
+          margin-right: 5px; }
+      .profile_page .top_profile .row .msg_and {
+        float: left;
+        text-align: right;
+        padding-right: 20px;
+        padding-top: 50px; }
+        .profile_page .top_profile .row .msg_and .btn_mess {
+          background-color: #ff8d4a;
+          border: 2px solid #ff7524;
+          padding: 6px 11px;
+          border-radius: 100%; }
+          .profile_page .top_profile .row .msg_and .btn_mess .ion-chatbubbles {
+            color: #FFECE2;
+            font-size: 18px; }
+      .profile_page .top_profile .row .foll_and {
+        float: left;
+        text-align: left;
+        padding-left: 20px;
+        padding-top: 50px; }
+        .profile_page .top_profile .row .foll_and .btn_foll {
+          background-color: #ffd84a;
+          border: 2px solid #ffd024;
+          padding: 6px 10.5px;
+          border-radius: 100%; }
+          .profile_page .top_profile .row .foll_and .btn_foll .ion-android-person-add {
+            color: #FFF7D9;
+            font-size: 18px; }
+  .profile_page .fpl_cnt {
+    padding: 0px 10px;
+    margin-top: 10px; }
+    .profile_page .fpl_cnt .row .fl_count {
+      text-align: right;
+      padding-right: 20px;
+      border-top: 1px solid #72A5E8;
+      padding-top: 20px; }
+      .profile_page .fpl_cnt .row .fl_count span {
+        font-size: 14px;
+        color: #fff;
+        font-family: "proxima_novasemibold"; }
+      .profile_page .fpl_cnt .row .fl_count p {
+        font-size: 18px;
+        color: #A1C5F3;
+        font-family: "FuturaPT-Bold"; }
+    .profile_page .fpl_cnt .row .ing_count {
+      text-align: left;
+      padding-left: 20px;
+      border-left: 1px solid #72A5E8;
+      border-top: 1px solid #72A5E8;
+      padding-top: 20px; }
+      .profile_page .fpl_cnt .row .ing_count span {
+        font-size: 14px;
+        color: #fff;
+        font-family: "proxima_novasemibold"; }
+      .profile_page .fpl_cnt .row .ing_count p {
+        font-size: 18px;
+        color: #A1C5F3;
+        font-family: "FuturaPT-Bold"; }
+
+  .map_u #map {
+    height: 210px;
+    width: 280px;
+    margin: 0 auto;
+    padding: 5px;
+    border-radius: 3px;
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07); }
+    .map_u #map .gm-style-mtc {
+      display: none; }
+
+  /*setting*/
+  .edit_hgf .hove {
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    background-color: rgba(0, 0, 0, 0.2);
+    left: 105px;
+    border: none;
+    border-radius: 100%; }
+    .edit_hgf .hove span {
+      font-size: 65px;
+      color: rgba(255, 255, 255, 0.5); }
+
+  .sgth {
+    margin-top: 0px !important; }
+    .sgth .edt_name {
+      margin: 0px auto; }
+      .sgth .edt_name .nme_edt {
+        width: 300px;
+        text-align: center;
+        padding-left: 20px;
+        padding-right: 20px;
+        background-color: transparent;
+        color: #fff;
+        font-size: 16px;
+        font-family: "proxima_nova_rgregular"; }
+      .sgth .edt_name .btn_nme {
+        position: absolute;
+        right: 20px;
+        margin-top: -28px;
+        background-color: transparent;
+        border: none;
+        outline: none; }
+        .sgth .edt_name .btn_nme .ion-android-send {
+          color: #fff; }
+    .sgth .edt_add {
+      margin: 0px auto; }
+      .sgth .edt_add .addr_edt {
+        width: 300px;
+        text-align: center;
+        padding-left: 20px;
+        padding-right: 20px;
+        background-color: transparent;
+        color: #fff;
+        font-size: 14px;
+        font-family: "proxima_nova_rgregular"; }
+      .sgth .edt_add .btn_nme {
+        position: absolute;
+        right: 20px;
+        margin-top: -28px;
+        background-color: transparent;
+        border: none;
+        outline: none; }
+        .sgth .edt_add .btn_nme .ion-android-send {
+          color: #fff; }
+
+  .em_ad_iy {
+    margin-top: 20px; }
+    .em_ad_iy .fhgrt {
+      padding: 20px 20px; }
+      .em_ad_iy .fhgrt .cfe .item {
+        border: none;
+        padding: 10px 20px; }
+        .em_ad_iy .fhgrt .cfe .item .njhrew {
+          padding-left: 30px;
+          font-family: "proxima_nova_rgregular";
+          font-size: 14px;
+          color: #848484; }
+      .em_ad_iy .fhgrt .cfe .ncb {
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px; }
+        .em_ad_iy .fhgrt .cfe .ncb:before {
+          content: "\f422";
+          font-family: "IonIcons";
+          font-size: 28px;
+          color: #848484; }
+      .em_ad_iy .fhgrt .cfe .kjt {
+        border-bottom-left-radius: 3px;
+        border-bottom-right-radius: 3px; }
+        .em_ad_iy .fhgrt .cfe .kjt:before {
+          content: "\f41b";
+          font-family: "IonIcons";
+          font-size: 28px;
+          color: #848484; }
+      .em_ad_iy .fhgrt .cfe .nbd:before {
+        content: "\f4b8";
+        font-family: "IonIcons";
+        font-size: 28px;
+        color: #848484; }
+    .em_ad_iy .nbgfsd {
+      text-align: center; }
+      .em_ad_iy .nbgfsd .btn-done {
+        background-color: #FFC107;
+        padding: 10px 40px;
+        border-radius: 3px;
+        color: #fff;
+        font-family: "Roboto";
+        border: none;
+        font-weight: 600;
+        font-size: 14px; }
+
+  /*end*/ }
+@media (max-width: 360px) {
   .profile_page .cie-cie {
     box-shadow: none;
     background-color: transparent !important; }

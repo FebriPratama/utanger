@@ -1,3 +1,6 @@
+.clear {
+  clear: both; }
+
 @media (max-width: 320px) {
   /*tabs.html*/
   .tabs {
@@ -396,6 +399,460 @@
               font-style: italic;
               color: #dedede; }
           .add_utg_bg .isi_utr .add_utang_isi .form_add_utg .for_if .icob, .add_utg_bg .isi_utr .add_utang_isi .form_add_utg .for_if .jml_utg_:before, .add_utg_bg .isi_utr .add_utang_isi .form_add_utg .for_if .tgl_payment:before {
+            font-family: "Ionicons";
+            color: #dedede;
+            font-size: 20px;
+            margin-top: 7px;
+            position: absolute;
+            margin-left: 10px; }
+          .add_utg_bg .isi_utr .add_utang_isi .form_add_utg .for_if .jml_utg_:before {
+            content: "\f272"; }
+          .add_utg_bg .isi_utr .add_utang_isi .form_add_utg .for_if .tgl_payment:before {
+            content: "\f35a"; }
+          .add_utg_bg .isi_utr .add_utang_isi .form_add_utg .for_if .btn_add, .add_utg_bg .isi_utr .add_utang_isi .form_add_utg .for_if .btn_cancel {
+            float: left;
+            width: 50%;
+            text-align: center;
+            padding: 20px 0px; }
+            .add_utg_bg .isi_utr .add_utang_isi .form_add_utg .for_if .btn_add .bts_x, .add_utg_bg .isi_utr .add_utang_isi .form_add_utg .for_if .btn_cancel .bts_x {
+              color: #fff;
+              background-color: #F58562;
+              border: none;
+              padding: 8px 25px;
+              font-size: 12px;
+              border-radius: 20px;
+              font-family: "proxima_nova_rgbold"; }
+            .add_utg_bg .isi_utr .add_utang_isi .form_add_utg .for_if .btn_add .bts_u, .add_utg_bg .isi_utr .add_utang_isi .form_add_utg .for_if .btn_cancel .bts_u {
+              color: #fff;
+              background-color: #5A92DC;
+              border: none;
+              padding: 8px 35px;
+              font-size: 12px;
+              border-radius: 20px;
+              font-family: "proxima_nova_rgbold"; }
+          .add_utg_bg .isi_utr .add_utang_isi .form_add_utg .for_if .bowe {
+            min-height: 200px;
+            border-bottom: 1px solid #fafafa; }
+            .add_utg_bg .isi_utr .add_utang_isi .form_add_utg .for_if .bowe .fhg {
+              padding-left: 10px;
+              margin-bottom: 15px;
+              padding-right: 20px; }
+              .add_utg_bg .isi_utr .add_utang_isi .form_add_utg .for_if .bowe .fhg .kjht {
+                text-decoration: none; }
+                .add_utg_bg .isi_utr .add_utang_isi .form_add_utg .for_if .bowe .fhg .kjht .ojgf {
+                  float: left;
+                  border-radius: 100%;
+                  margin-right: 10px; }
+                .add_utg_bg .isi_utr .add_utang_isi .form_add_utg .for_if .bowe .fhg .kjht .nsu {
+                  color: #333;
+                  font-family: "proxima_nova_rgregular";
+                  font-size: 14px;
+                  padding-top: 15px; }
+                  .add_utg_bg .isi_utr .add_utang_isi .form_add_utg .for_if .bowe .fhg .kjht .nsu .kje {
+                    width: 8px;
+                    height: 8px;
+                    border-radius: 100%;
+                    float: right;
+                    background-color: #9CCC65; }
+            .add_utg_bg .isi_utr .add_utang_isi .form_add_utg .for_if .bowe .ngdfr {
+              padding: 10px 0px !important; } }
+@media (max-width: 360px) {
+  .tabs {
+    background-color: #4d8bdd !important;
+    border: none;
+    background-image: none !important; }
+    .tabs .utg_tab {
+      color: #fff; }
+    .tabs .ion-android-home, .tabs .ion-ios-chatboxes, .tabs .ion-android-notifications {
+      font-size: 22px !important;
+      color: #3770bc; }
+    .tabs .ion-android-people {
+      font-size: 24px !important;
+      color: #3770bc; }
+    .tabs .tab-item-active .icon {
+      color: #fff !important; }
+
+  .tabs-background-positive .tabs {
+    border-color: transparent;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.18); }
+
+  /*end*/
+  /*tab utang.html*/
+  .tabs-hed {
+    background-color: #4d8bdd !important;
+    background-image: none !important;
+    max-height: 50px;
+    height: 50px; }
+    .tabs-hed .fa-bars {
+      font-size: 18px !important;
+      color: #fff;
+      font-weight: normal; }
+    .tabs-hed .title_tab {
+      font-size: 13px !important;
+      color: #fff !important;
+      margin: 0px;
+      letter-spacing: .5px;
+      font-weight: 500;
+      margin-top: 3px;
+      font-family: "proxima_nova_rgregular"; }
+    .tabs-hed .gfr {
+      font-size: 21px !important;
+      color: #fff;
+      font-weight: normal;
+      padding-right: 7px; }
+
+  .lst_utang {
+    padding: 5%; }
+    .lst_utang .utangs_dta {
+      background-color: #fff;
+      border-radius: 4px;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07);
+      margin-bottom: 20px;
+      /*height: 146px;*/ }
+      .lst_utang .utangs_dta .desc {
+        padding: 15px;
+        border-top: 3px solid #4D8BDD;
+        border-top-left-radius: 2px;
+        border-top-right-radius: 2px; }
+        .lst_utang .utangs_dta .desc .img_f {
+          float: left;
+          border-radius: 100%; }
+        .lst_utang .utangs_dta .desc .nam {
+          font-size: 17px;
+          color: #B3B3B3;
+          margin: 0;
+          padding-left: 60px;
+          font-family: "FuturaPT-Medium"; }
+        .lst_utang .utangs_dta .desc .adre {
+          padding-left: 60px;
+          font-family: "proxima_nova_rgregular";
+          font-size: 14px;
+          line-height: 18px;
+          color: #B7B7B7;
+          margin-top: 5px;
+          margin-bottom: 0px; }
+      .lst_utang .utangs_dta .jlkf {
+        border-top: 1px solid #EFEEF9;
+        background-color: #FAFAFC;
+        padding: 5px;
+        border-bottom-left-radius: 4px;
+        border-bottom-right-radius: 4px; }
+        .lst_utang .utangs_dta .jlkf .utang {
+          float: left;
+          text-align: center;
+          width: 33%; }
+          .lst_utang .utangs_dta .jlkf .utang span {
+            font-size: 15px;
+            font-family: "FuturaPT-Light";
+            color: #C1C0D4; }
+          .lst_utang .utangs_dta .jlkf .utang p {
+            margin: 0;
+            font-family: "FuturaPT-Medium";
+            color: #342F37; }
+        .lst_utang .utangs_dta .jlkf .status {
+          float: left;
+          text-align: center;
+          width: 33%; }
+          .lst_utang .utangs_dta .jlkf .status span {
+            font-size: 15px;
+            font-family: "FuturaPT-Light";
+            color: #C1C0D4; }
+          .lst_utang .utangs_dta .jlkf .status p {
+            margin: 0;
+            font-family: "FuturaPT-Medium";
+            color: #342F37; }
+          .lst_utang .utangs_dta .jlkf .status .paid {
+            color: #44CEA9 !important; }
+          .lst_utang .utangs_dta .jlkf .status .pending {
+            color: #FF5A60 !important; }
+        .lst_utang .utangs_dta .jlkf .tgl_kembali {
+          float: left;
+          text-align: center;
+          width: 33%; }
+          .lst_utang .utangs_dta .jlkf .tgl_kembali span {
+            font-size: 15px;
+            font-family: "FuturaPT-Light";
+            color: #C1C0D4; }
+          .lst_utang .utangs_dta .jlkf .tgl_kembali p {
+            margin: 0;
+            font-family: "FuturaPT-Medium";
+            color: #342F37; }
+      .lst_utang .utangs_dta .del {
+        position: absolute;
+        right: 24px;
+        margin-top: 5px; }
+        .lst_utang .utangs_dta .del span {
+          color: #dedede;
+          font-size: 12px; }
+
+  /*end*/
+  /*tab messages*/
+  .fr_chat .chat_fr_u {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 11px;
+    padding-bottom: 1px;
+    border-bottom: 1px solid #F7F7F7;
+    background-color: #fff; }
+    .fr_chat .chat_fr_u .imf_g a {
+      text-decoration: none; }
+      .fr_chat .chat_fr_u .imf_g a .img_y {
+        width: 45px;
+        border-radius: 15%;
+        padding: 2px;
+        /*background-color: #CECECE;*/
+        float: left; }
+      .fr_chat .chat_fr_u .imf_g a .nameo {
+        margin: 0px;
+        font-size: 16px;
+        font-family: "proxima_nova_rgregular";
+        color: #454545;
+        padding-left: 55px;
+        padding-top: 5px; }
+        .fr_chat .chat_fr_u .imf_g a .nameo .dtr {
+          float: right;
+          font-size: 12px;
+          font-family: "proxima_novalight";
+          color: #CAD0D8; }
+      .fr_chat .chat_fr_u .imf_g a .cone {
+        color: #7D7D7D;
+        font-size: 13px;
+        font-family: "proxima_nova_rgregular";
+        padding-left: 55px; }
+        .fr_chat .chat_fr_u .imf_g a .cone .msg_count {
+          padding: 0px 9px;
+          position: absolute;
+          right: 20px;
+          border-radius: 4px;
+          background-color: #c4dbf9;
+          color: #fff;
+          font-family: "FuturaPT-Medium";
+          font-size: 10px; }
+    .fr_chat .chat_fr_u .del {
+      position: absolute;
+      left: 7px;
+      /* top: 0; */
+      margin-top: -11px; }
+      .fr_chat .chat_fr_u .del .ion-close-round {
+        font-size: 10px;
+        color: #C4DBF9; }
+  .fr_chat .vcdd {
+    background-color: white !important;
+    /*border-color: rgba(255,255,255,1) !important;*/ }
+
+  /*end*/
+  /*tab friend*/
+  .friend_lst {
+    padding-top: 30px; }
+    .friend_lst .frdlist {
+      padding-left: 20px;
+      padding-right: 20px; }
+      .friend_lst .frdlist .fir_content {
+        margin-top: 10px;
+        height: 95px;
+        float: left;
+        text-align: center;
+        width: 65px; }
+        .friend_lst .frdlist .fir_content .cjg {
+          position: absolute;
+          margin-left: 59px;
+          margin-top: 38px;
+          background-color: #c4dbf9;
+          padding: 0px 5px;
+          border-radius: 100%; }
+          .friend_lst .frdlist .fir_content .cjg .ion-checkmark-round {
+            font-size: 12px;
+            color: #fff; }
+          .friend_lst .frdlist .fir_content .cjg .ion-plus-round {
+            font-size: 12px;
+            color: #fff; }
+        .friend_lst .frdlist .fir_content a {
+          text-decoration: none; }
+          .friend_lst .frdlist .fir_content a .fgtr {
+            border-radius: 100%;
+            padding: 5px;
+            background-color: #fff;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07); }
+          .friend_lst .frdlist .fir_content a .nbgf {
+            color: #949494;
+            font-size: 13px;
+            font-family: "proxima_nova_rgregular";
+            margin: 0; }
+
+  .sch_frien {
+    padding: 20px 24px;
+    padding-top: 10px; }
+    .sch_frien .ingfre {
+      float: left;
+      width: 76%;
+      padding-bottom: 4px;
+      padding-left: 20px;
+      padding-right: 50px;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07);
+      border-radius: 4px;
+      font-family: "proxima_novalight";
+      color: #888;
+      font-size: 15px; }
+    .sch_frien .clauy {
+      position: absolute;
+      right: 27px;
+      background-color: #4D8BDD;
+      border: none;
+      color: #fff;
+      padding: 10.5px 16px;
+      border-top-right-radius: 4px;
+      border-bottom-right-radius: 4px; }
+
+  /*end*/
+  .notif_co .qw_not {
+    padding: 10px 10px; }
+    .notif_co .qw_not .mnbg_f {
+      padding: 15px 15px;
+      padding-bottom: 12px;
+      background-color: #fff;
+      border-left: 3px solid #4D8BDD;
+      margin-bottom: 10px;
+      border-radius: 2px;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07); }
+      .notif_co .qw_not .mnbg_f .notif_ver {
+        float: left; }
+        .notif_co .qw_not .mnbg_f .notif_ver .void {
+          border-radius: 100%;
+          width: 38.2px; }
+      .notif_co .qw_not .mnbg_f .couts {
+        padding-left: 50px; }
+        .notif_co .qw_not .mnbg_f .couts a {
+          text-decoration: none; }
+          .notif_co .qw_not .mnbg_f .couts a .bd {
+            margin: 0px;
+            color: #7C8188;
+            font-family: "proxima_nova_rgregular";
+            font-size: 14px; }
+      .notif_co .qw_not .mnbg_f .del_j {
+        position: absolute;
+        right: 20px;
+        margin-top: -10px;
+        background-color: transparent;
+        border: none;
+        padding: 0;
+        outline: none; }
+        .notif_co .qw_not .mnbg_f .del_j .ion-close-round {
+          font-size: 12px;
+          color: #dedede; }
+
+  .add_utg_bg {
+    background-color: rgba(0, 0, 0, 0.3); }
+    .add_utg_bg .isi_utr {
+      padding-right: 20px;
+      padding-left: 20px;
+      padding-top: 30%; }
+      .add_utg_bg .isi_utr .ads_utg {
+        position: relative;
+        border-top-right-radius: 3px;
+        border-top-left-radius: 3px;
+        background-color: #5A92DC;
+        border-bottom: none !important;
+        background-image: none;
+        height: 100%; }
+        .add_utg_bg .isi_utr .ads_utg .sch_from {
+          margin: 0;
+          padding: 4px; }
+          .add_utg_bg .isi_utr .ads_utg .sch_from:before {
+            content: "\f4a4";
+            font-family: "Ionicons";
+            position: absolute;
+            font-size: 21px;
+            color: #4877B5;
+            margin-top: 9px;
+            margin-left: 10px; }
+          .add_utg_bg .isi_utr .ads_utg .sch_from .borr {
+            width: 300px;
+            border-radius: 4px;
+            background-color: #5788CC;
+            padding-left: 40px;
+            -webkit-box-shadow: 2px 3px 6px -7px rgba(0, 0, 0, 0.5);
+            -moz-box-shadow: 2px 3px 6px -7px rgba(0, 0, 0, 0.5);
+            box-shadow: inset 2px 3px 6px -7px rgba(0, 0, 0, 0.5);
+            color: #fff;
+            font-family: "proxima_nova_rgregular";
+            font-size: 14px; }
+          .add_utg_bg .isi_utr .ads_utg .sch_from ::-webkit-input-placeholder {
+            /* Chrome/Opera/Safari */
+            font-style: italic;
+            color: #4877B5; }
+        .add_utg_bg .isi_utr .ads_utg .xcdk {
+          font-size: 13px !important;
+          color: #fff !important;
+          margin: 0px;
+          letter-spacing: .5px;
+          font-weight: 500;
+          margin-top: 3px;
+          font-family: "proxima_nova_rgregular";
+          border: none; }
+        .add_utg_bg .isi_utr .ads_utg .btn_tr .gfro {
+          font-size: 12px;
+          color: #fff;
+          margin-right: 10px; }
+      .add_utg_bg .isi_utr .add_utang_isi {
+        border-bottom-right-radius: 3px;
+        border-bottom-left-radius: 3px;
+        position: relative; }
+        .add_utg_bg .isi_utr .add_utang_isi .user_choose {
+          text-align: center; }
+          .add_utg_bg .isi_utr .add_utang_isi .user_choose .item {
+            border: none !important;
+            margin: 0; }
+            .add_utg_bg .isi_utr .add_utang_isi .user_choose .item .item-content {
+              background-color: #5A92DC;
+              padding: 0px;
+              padding-top: 10px;
+              padding-bottom: 10px; }
+              .add_utg_bg .isi_utr .add_utang_isi .user_choose .item .item-content img {
+                border-radius: 100%;
+                /*border:3px solid #fff;*/
+                -webkit-box-shadow: 2px 3px 6px -7px rgba(0, 0, 0, 0.5);
+                -moz-box-shadow: 2px 3px 6px -7px rgba(0, 0, 0, 0.5);
+                box-shadow: inset 2px 3px 6px -7px rgba(0, 0, 0, 0.5); }
+              .add_utg_bg .isi_utr .add_utang_isi .user_choose .item .item-content .nabe {
+                color: #4877B5;
+                font-size: 14px;
+                font-family: "proxima_novasemibold"; }
+            .add_utg_bg .isi_utr .add_utang_isi .user_choose .item .radio-icon {
+              position: absolute;
+              top: 41px;
+              left: 53% !important;
+              right: auto;
+              z-index: 3;
+              padding: 2px 6px;
+              height: auto !important;
+              border-radius: 20px;
+              font-size: 12px;
+              background-color: #E0EDFF;
+              color: #FFFFFF;
+              box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2); }
+        .add_utg_bg .isi_utr .add_utang_isi .form_add_utg .for_if {
+          background-color: #fff;
+          padding: 5px 0px;
+          border-bottom-left-radius: 3px;
+          border-bottom-right-radius: 3px; }
+          .add_utg_bg .isi_utr .add_utang_isi .form_add_utg .for_if .jml_utg_, .add_utg_bg .isi_utr .add_utang_isi .form_add_utg .for_if .tgl_payment {
+            padding: 5px 20px; }
+            .add_utg_bg .isi_utr .add_utang_isi .form_add_utg .for_if .jml_utg_ .inpt_utgs, .add_utg_bg .isi_utr .add_utang_isi .form_add_utg .for_if .jml_utg_ .payment_date, .add_utg_bg .isi_utr .add_utang_isi .form_add_utg .for_if .tgl_payment .inpt_utgs, .add_utg_bg .isi_utr .add_utang_isi .form_add_utg .for_if .tgl_payment .payment_date {
+              padding-left: 40px;
+              background-color: #F9F9F9;
+              border-radius: 4px;
+              width: 240px;
+              -webkit-box-shadow: 2px 3px 6px -7px rgba(0, 0, 0, 0.6);
+              -moz-box-shadow: 2px 3px 6px -7px rgba(0, 0, 0, 0.6);
+              box-shadow: inset 2px 3px 6px -7px rgba(0, 0, 0, 0.6);
+              color: #535353;
+              font-family: "proxima_nova_rgregular";
+              font-size: 14px; }
+            .add_utg_bg .isi_utr .add_utang_isi .form_add_utg .for_if .jml_utg_ ::-webkit-input-placeholder, .add_utg_bg .isi_utr .add_utang_isi .form_add_utg .for_if .tgl_payment ::-webkit-input-placeholder {
+              /* Chrome/Opera/Safari */
+              font-style: italic;
+              color: #dedede; }
+          .add_utg_bg .isi_utr .add_utang_isi .form_add_utg .for_if .icobf, .add_utg_bg .isi_utr .add_utang_isi .form_add_utg .for_if .jml_utg_:before, .add_utg_bg .isi_utr .add_utang_isi .form_add_utg .for_if .tgl_payment:before {
             font-family: "Ionicons";
             color: #dedede;
             font-size: 20px;
