@@ -1,3 +1,6 @@
+.clear {
+	clear: both;
+}
 @media(max-width: 320px){
 	.reg_logo {
 		margin-top: 17% !important;
@@ -59,7 +62,7 @@
 }
 
 @media(max-width: 360px){
-.reg_logo {
+	.reg_logo {
 		margin-top: 17% !important;
 	}
 	.icon-fontr {
@@ -119,7 +122,63 @@
 }
 
 @media(max-width: 375px){
+	.reg_logo {
+		margin-top: 17% !important;
+	}
+	.icon-fontrs {
+		font-family: "FontAwesome";
+		position: absolute;
+		left:0px;
+		padding: 6px 17px;
+		border-right: 1px solid;
+		border-color:rgba(255,255,255,.3);
+		top: 6px;
+		z-index: 10;
+		color: #fff;
+		font-size: 14px !important;
+	}
+	.dta_reg_inpt {
+		margin-top: 12% !important;
+		.broo {
+			padding: 0px !important;
+			.left_pass {
+				padding-left:0px !important;
+			}
+			.right_pass {
+				padding-right: 0px !important;
+				.item-repeat {
+					&:before {
+						@extend .icon-fontrs;
+						content: "\f021";
+					}
+				}
+			}
+		}
+		.item-name {
+			&:before {
+				@extend .icon-fontrs;
+				content: "\f007";
+				font-size: 18px!important;
+			}
+		}
+		.item-addd {
+			&:before {
+				@extend .icon-fontrs;
+				content: "\f095";
+				font-size: 18px!important;
+			}
+		}
+	}
 
+	.btn_i {
+		.reg_s {
+			padding: 12px 39.9%;
+		}
+	}
+
+	.ques-reg {
+		padding-top: 4%;
+	}
 }
 
 @media(max-width: 411px){

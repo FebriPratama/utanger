@@ -1,3 +1,6 @@
+.clear {
+  clear: both; }
+
 @media (max-width: 320px) {
   .reg_logo {
     margin-top: 17% !important; }
@@ -41,6 +44,44 @@
     margin-top: 17% !important; }
 
   .icon-fontr, .dta_reg_inpt .broo .right_pass .item-repeat:before, .dta_reg_inpt .item-name:before, .dta_reg_inpt .item-addd:before {
+    font-family: "FontAwesome";
+    position: absolute;
+    left: 0px;
+    padding: 6px 17px;
+    border-right: 1px solid;
+    border-color: rgba(255, 255, 255, 0.3);
+    top: 6px;
+    z-index: 10;
+    color: #fff;
+    font-size: 14px !important; }
+
+  .dta_reg_inpt {
+    margin-top: 12% !important; }
+    .dta_reg_inpt .broo {
+      padding: 0px !important; }
+      .dta_reg_inpt .broo .left_pass {
+        padding-left: 0px !important; }
+      .dta_reg_inpt .broo .right_pass {
+        padding-right: 0px !important; }
+        .dta_reg_inpt .broo .right_pass .item-repeat:before {
+          content: "\f021"; }
+    .dta_reg_inpt .item-name:before {
+      content: "\f007";
+      font-size: 18px !important; }
+    .dta_reg_inpt .item-addd:before {
+      content: "\f095";
+      font-size: 18px !important; }
+
+  .btn_i .reg_s {
+    padding: 12px 39.9%; }
+
+  .ques-reg {
+    padding-top: 4%; } }
+@media (max-width: 375px) {
+  .reg_logo {
+    margin-top: 17% !important; }
+
+  .icon-fontrs, .dta_reg_inpt .broo .right_pass .item-repeat:before, .dta_reg_inpt .item-name:before, .dta_reg_inpt .item-addd:before {
     font-family: "FontAwesome";
     position: absolute;
     left: 0px;
