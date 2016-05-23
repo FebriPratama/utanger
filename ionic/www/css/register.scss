@@ -122,10 +122,26 @@
 }
 
 @media(max-width: 375px){
+	
+}
+
+@media(max-width: 411px){
+
+}
+
+@media(max-width: 414px){
+
+}
+
+@media(max-width: 435px){
+
+}
+
+@media(max-width: 768px){
 	.reg_logo {
 		margin-top: 17% !important;
 	}
-	.icon-fontrs {
+	.icon-fontg {
 		font-family: "FontAwesome";
 		position: absolute;
 		left:0px;
@@ -148,7 +164,7 @@
 				padding-right: 0px !important;
 				.item-repeat {
 					&:before {
-						@extend .icon-fontrs;
+						@extend .icon-fontg;
 						content: "\f021";
 					}
 				}
@@ -156,14 +172,14 @@
 		}
 		.item-name {
 			&:before {
-				@extend .icon-fontrs;
+				@extend .icon-fontg;
 				content: "\f007";
 				font-size: 18px!important;
 			}
 		}
 		.item-addd {
 			&:before {
-				@extend .icon-fontrs;
+				@extend .icon-fontg;
 				content: "\f095";
 				font-size: 18px!important;
 			}
@@ -179,20 +195,4 @@
 	.ques-reg {
 		padding-top: 4%;
 	}
-}
-
-@media(max-width: 411px){
-
-}
-
-@media(max-width: 414px){
-
-}
-
-@media(max-width: 435px){
-
-}
-
-@media(min-width: 768px){
-
 }

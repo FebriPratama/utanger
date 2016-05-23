@@ -77,11 +77,11 @@
 
   .ques-reg {
     padding-top: 4%; } }
-@media (max-width: 375px) {
+@media (max-width: 768px) {
   .reg_logo {
     margin-top: 17% !important; }
 
-  .icon-fontrs, .dta_reg_inpt .broo .right_pass .item-repeat:before, .dta_reg_inpt .item-name:before, .dta_reg_inpt .item-addd:before {
+  .icon-fontg, .dta_reg_inpt .broo .right_pass .item-repeat:before, .dta_reg_inpt .item-name:before, .dta_reg_inpt .item-addd:before {
     font-family: "FontAwesome";
     position: absolute;
     left: 0px;

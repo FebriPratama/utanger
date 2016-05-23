@@ -231,6 +231,103 @@ body {
 
 }
 
-@media(min-width: 768px){
+@media(max-width: 768px){
+	.icon-font2v {
+		font-family: "FontAwesome";
+		position: absolute;
+		left:0px;
+		padding: 6px 17px;
+		border-right: 1px solid;
+		border-color:rgba(255,255,255,.3);
+		top: 6px;
+		z-index: 10;
+		color: #fff;
+		font-size: 14px !important;
+	}
+	.logo {
+		background:url(../img/320/logo.png);
+		background-size: cover;
+		width: 93px;
+		height: 100px;
+		position: relative;
+		margin: 0 auto;
+		margin-top: 22%;
+	}
+	.txt {
+		text-align: center;
+		.txt-logo {
+			font-size: 30px;
+			margin-top: 1%;
+			font-family: "FuturaPT-ExtraBold";
+			color: #fff;
+		}
+	}
+	.dta_ipt {
+		margin-top: 25%;
+		padding: 0px 20px;
+		.item-email, .item-passwd, .item-name, .item-addd {
+			margin-top: 5%;
+			background-color: transparent;
+			border:1px solid;
+			padding-left: 65px;
+			border-radius: 4px;
+			border-color: rgba(255,255,255,.2);
+			input {
+				color: #fff !important;
+				font-size: 16px;
+				font-family: "FuturaPT-Book";
+			}
+			::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+				color: #fff;
+			}
+		}
+		.item-email {
+			&:before {
+				content: "\f0e0";
+				font-family: "FontAwesome";
+				@extend .icon-font2v;
+			}
+		}
+		.item-passwd {
+			&:before {
+				content: "\f023";
+				font-family: "FontAwesome";
+				@extend .icon-font2v;
+				font-size: 18px!important;
+				padding: 6px 17.5px;
+			}
+		}
+	}
 
+	.log_btn {
+		text-align: center;
+		padding: 0px 20px;
+		padding-top:4.5%;
+		.login_u {
+			background-color: transparent;
+			color: #fff;
+			font-size: 14px;
+			font-family: "proxima_novasemibold";
+			border: 1px solid;
+			border-color: rgba(255,255,255,.7);
+			padding: 12px 41.4%;
+			text-transform: uppercase;
+			border-radius: 4px;
+		}
+	}
+
+	.ques {
+		text-align: center;
+		padding-top: 8%;
+		p {
+			color: #fff;
+			font-size: 14px;
+			font-family: "proxima_nova_rgregular";
+			a {
+				text-decoration: none;
+				color: #fff;
+				font-family: "proxima_nova_rgbold";
+			}
+		}
+	}
 }
